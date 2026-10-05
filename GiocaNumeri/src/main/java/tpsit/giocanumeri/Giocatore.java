@@ -1,3 +1,5 @@
+package tpsit.giocanumeri;
+
 public class Giocatore extends Thread{
     String nome;
     String parola;
