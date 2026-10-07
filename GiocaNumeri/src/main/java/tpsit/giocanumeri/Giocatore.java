@@ -46,6 +46,7 @@ public class Giocatore extends Thread{
             } catch (InterruptedException e) {
                 System.err.println("Errore nella transizione del thread da running a sleeping");
             }
+            currentThread().yield();
         }
 
         setPunteggio(100);
