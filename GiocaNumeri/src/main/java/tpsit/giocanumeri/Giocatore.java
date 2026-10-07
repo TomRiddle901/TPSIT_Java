@@ -9,14 +9,33 @@ public class Giocatore extends Thread{
         this.nome = nome;
     }
 
+    // Getter
+    public String getParola() {
+        return parola;
+    }
+
+    public int getPunteggio(){
+        return punteggio;
+    }
+
+    // Setter
+    public void setParola(String parola) {
+        this.parola = parola;
+    }
+
+    public void setPunteggio(int punteggio) {
+        this.punteggio = punteggio;
+    }
+
     public void gioca(){
         int numero = 19;
         String parola = "Buongiorno";
+
         for (int i = 0; i < numero; i++){
             System.out.println("Giocatore " + nome + ": " + i);
         }
 
-        punteggio = 10;
+        setPunteggio(100);
     }
 
     public void comunica(){
