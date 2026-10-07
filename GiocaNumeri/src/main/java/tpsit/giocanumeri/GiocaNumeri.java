@@ -7,7 +7,7 @@ package tpsit.giocanumeri;
 
 public class GiocaNumeri {
     public static void main(String[] args) {
-        System.out.println("Benvenuto!");
+        System.out.println("Inizio gioco");
 
         Giocatore g1 = new Giocatore("Tommaso");
         Giocatore g2 = new Giocatore("Alessandro");
