@@ -1,9 +1,9 @@
 package tpsit.giocanumeri;
 
 public class Giocatore extends Thread{
-    String nome;
-    String parola;
-    int punteggio;
+    private String nome;
+    private String parola;
+    private int punteggio;
 
     public Giocatore(String nome){
         this.nome = nome;
