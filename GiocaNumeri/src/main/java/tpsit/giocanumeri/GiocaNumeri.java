@@ -1,3 +1,8 @@
+/**
+ * <h1>Applicazione multithreading</h1>
+ * @author TomRiddle901
+ */
+
 package tpsit.giocanumeri;
 
 public class GiocaNumeri {

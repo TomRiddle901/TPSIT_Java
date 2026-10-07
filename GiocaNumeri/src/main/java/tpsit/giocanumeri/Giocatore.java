@@ -5,6 +5,11 @@ public class Giocatore extends Thread{
     private String parola;
     private int punteggio;
 
+    /**
+     *
+     * @param nome nome del giocatore
+     */
+
     public Giocatore(String nome){
         this.nome = nome;
     }
