@@ -1,6 +1,6 @@
 package tpsit.giocanumeri.runnable;
 
-public class Main {
+public class GiocaNumeri {
     static void main() {
 
     }
