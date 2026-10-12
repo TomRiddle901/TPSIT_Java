@@ -12,4 +12,12 @@ public class Giocatore implements Runnable{
     public Giocatore(String nome){
         this.nome = nome;
     }
+
+    /**
+     * Metodo Run presente nella classe Runnable
+     */
+    @Override
+    public void run(){
+
+    }
 }
