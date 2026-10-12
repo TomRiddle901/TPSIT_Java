@@ -53,6 +53,7 @@ public class Giocatore implements Runnable{
      */
     @Override
     public void run(){
-
+        gioca();
+        comunica();
     }
 }
