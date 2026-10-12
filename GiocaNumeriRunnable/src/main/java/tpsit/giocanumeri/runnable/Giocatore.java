@@ -20,4 +20,24 @@ public class Giocatore implements Runnable{
     public void run(){
 
     }
+
+    /**
+     * Metodo che implementa la logica del gioco
+     */
+    public void gioca(){
+        int numero = 19;
+        parola = "Runnable!";
+
+        for (int i = 0; i < numero; i++){
+            System.out.println("Giocatore: " + nome + ": " + i);
+
+            try {
+                Thread.sleep(2000);
+            }catch (InterruptedException interruptedEx){
+                System.err.println("Errore nella transizione del Thread da running a sleeping");
+            }
+        }
+
+        setPunteggio(100);
+    }
 }
