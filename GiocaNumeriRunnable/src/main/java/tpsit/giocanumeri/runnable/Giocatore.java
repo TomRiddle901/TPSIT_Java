@@ -14,6 +14,14 @@ public class Giocatore implements Runnable{
     }
 
     /**
+     * Setter per impostare il punteggio
+     * @param punti Punteggio passato (int)
+     */
+    public void setPunteggio(int punti){
+        punteggio = punti;
+    }
+
+    /**
      * Metodo Run presente nella classe Runnable
      */
     @Override
