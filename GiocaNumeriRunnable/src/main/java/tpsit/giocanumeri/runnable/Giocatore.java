@@ -1,5 +1,9 @@
 package tpsit.giocanumeri.runnable;
 
+/**
+ * Classe del giocatore
+ * @implNote java.lang.Runnable Implementazione della classe Runnable
+ */
 public class Giocatore implements Runnable{
     private String nome;
     private String parola;
