@@ -22,14 +22,6 @@ public class Giocatore implements Runnable{
     }
 
     /**
-     * Metodo Run presente nella classe Runnable
-     */
-    @Override
-    public void run(){
-
-    }
-
-    /**
      * Metodo che implementa la logica del gioco
      */
     public void gioca(){
@@ -47,5 +39,13 @@ public class Giocatore implements Runnable{
         }
 
         setPunteggio(100);
+    }
+
+    /**
+     * Metodo Run presente nella classe Runnable
+     */
+    @Override
+    public void run(){
+
     }
 }
