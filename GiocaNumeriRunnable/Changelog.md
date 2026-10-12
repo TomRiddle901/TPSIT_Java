@@ -5,5 +5,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ---
 
 ## [0.1.0]
+
+### Aggiunto
 - Creato il nuovo progetto utilizzando le stesse classi del progetto `GiocaNumeri`
 - Utilizzo della classe `Runnable` sulla classe `Giocatore` al posto della classe `Thread`
