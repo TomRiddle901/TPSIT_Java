@@ -22,7 +22,7 @@ public class Giocatore implements Runnable{
     }
 
     /**
-     * Metodo che implementa la logica del gioco
+     * Logica del gioco
      */
     public void gioca(){
         int numero = 19;
@@ -39,6 +39,13 @@ public class Giocatore implements Runnable{
         }
 
         setPunteggio(100);
+    }
+
+    /**
+     * Comunica nome, punteggio e parola del giocatore
+     */
+    public void comunica(){
+        System.out.println("Giocatore " + nome + ": " + punteggio + "pt ha scelto la parola: " + parola);
     }
 
     /**
