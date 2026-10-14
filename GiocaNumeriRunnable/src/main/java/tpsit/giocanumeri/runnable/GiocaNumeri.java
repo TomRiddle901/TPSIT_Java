@@ -51,7 +51,7 @@ public class GiocaNumeri {
      * Visualizza id, nome, priorità e stato del Thread corrente
      * @param thread Thread in esecuzione
      */
-    public static void getInfoThread(Thread thread){
+    private static void getInfoThread(Thread thread){
         System.out.println("ID: " + thread.threadId());
         System.out.println("Nome: " + thread.getName());
         System.out.println("Priorità: " + thread.getPriority());
