@@ -8,6 +8,7 @@ public class Giocatore implements Runnable{
     private String nome;
     private String parola;
     private int punteggio;
+    long tempoInizio = System.currentTimeMillis();
 
     /**
      * Costruttore classe Giocatore
@@ -51,7 +52,9 @@ public class Giocatore implements Runnable{
      * Comunica nome, punteggio e parola del giocatore
      */
     public void comunica(){
+        long tempoFine = System.currentTimeMillis();
         System.out.println(nome + ": " + punteggio + "pt ha scelto la parola: " + parola);
+        System.out.println("Tempo di esecuzione del Thread (s): " + (tempoFine/1000.0));
     }
 
     public void getDettagli(){
@@ -68,7 +71,6 @@ public class Giocatore implements Runnable{
     @Override
     public void run(){
         gioca();
-        getDettagli();
         comunica();
     }
 }
