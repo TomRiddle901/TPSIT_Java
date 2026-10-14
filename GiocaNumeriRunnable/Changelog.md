@@ -4,6 +4,16 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## [0.2.0] 14/10/2026
+
+### Aggiunto
+- Stampa dell'ID del Thread dei giocatore corrente
+- Stampa del Nome del Thread del giocatore corrente
+- Stampa della Priorità del Thread del giocatore corrente
+- Stampa dello stato del Thread del giocatore corrente
+
+---
+
 ## [0.1.0] 12/10/2026
 
 ### Aggiunto

@@ -32,8 +32,10 @@ public class Giocatore implements Runnable{
         int numero = 19;
         parola = "Runnable!";
 
+        getDettagli();
+
         for (int i = 0; i < numero; i++){
-            System.out.println("Giocatore: " + nome + ": " + i);
+            System.out.println(nome + ": " + i);
 
             try {
                 Thread.sleep(2000);
@@ -43,13 +45,22 @@ public class Giocatore implements Runnable{
         }
 
         setPunteggio(100);
+        getDettagli();
     }
 
     /**
      * Comunica nome, punteggio e parola del giocatore
      */
     public void comunica(){
-        System.out.println("Giocatore " + nome + ": " + punteggio + "pt ha scelto la parola: " + parola);
+        System.out.println(nome + ": " + punteggio + "pt ha scelto la parola: " + parola);
+        getDettagli();
+    }
+
+    public void getDettagli(){
+        System.out.println("ID: " + Thread.currentThread().threadId());
+        System.out.println("Nome: " + Thread.currentThread().getName());
+        System.out.println("Priorità: " + Thread.currentThread().getPriority());
+        System.out.println("Stato: " + Thread.currentThread().getState());
     }
 
     /**
@@ -58,6 +69,7 @@ public class Giocatore implements Runnable{
     @Override
     public void run(){
         gioca();
+        getDettagli();
         comunica();
     }
 }
