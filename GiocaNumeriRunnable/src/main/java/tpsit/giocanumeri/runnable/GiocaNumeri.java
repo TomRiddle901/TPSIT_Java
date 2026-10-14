@@ -23,6 +23,19 @@ public class GiocaNumeri {
 
         g1Thread.start();
         g2Thread.start();
+
+        // Aspetto che i Thread dei giocatori siano terminati
+        try{
+            g1Thread.join();
+            g2Thread.join();
+        } catch (InterruptedException interruptedEx) {
+            System.out.println("Errore nella transizione del Thread da running a waiting");
+        }
+
+        // Ottieni le informazioni sui Thread
+        getInfoThread(g1Thread);
+        getInfoThread(g2Thread);
+        getInfoThread(Thread.currentThread());
     }
 
     /**
@@ -34,5 +47,6 @@ public class GiocaNumeri {
         System.out.println("Nome: " + thread.getName());
         System.out.println("Priorità: " + thread.getPriority());
         System.out.println("Stato: " + thread.getState());
+        System.out.println("------------------------------");
     }
 }

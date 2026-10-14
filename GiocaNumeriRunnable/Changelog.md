@@ -11,6 +11,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Stampa del Nome del Thread del giocatore corrente
 - Stampa della Priorità del Thread del giocatore corrente
 - Stampa dello stato del Thread del giocatore corrente
+- Metodo `getInfoThread()` per visualizzare lo stato del Thread corrente all'interno del main
 
 ---
 
