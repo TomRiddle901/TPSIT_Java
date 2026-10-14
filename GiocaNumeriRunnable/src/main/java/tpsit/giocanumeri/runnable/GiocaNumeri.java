@@ -9,7 +9,10 @@ public class GiocaNumeri {
         Giocatore g1 = new Giocatore("Giocatore 1");
         Giocatore g2 = new Giocatore("Giocatore 2");
 
-        new Thread(g1).start();
-        new Thread(g2).start();
+        Thread g1Thread = new Thread(g1);
+        Thread g2Thread = new Thread(g2);
+
+        g1Thread.start();
+        g2Thread.start();
     }
 }
