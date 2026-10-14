@@ -45,7 +45,6 @@ public class Giocatore implements Runnable{
         }
 
         setPunteggio(100);
-        getDettagli();
     }
 
     /**

@@ -6,9 +6,13 @@ package tpsit.giocanumeri.runnable;
 
 public class GiocaNumeri {
     static void main() {
+        // Tempo di avvio del Thread main
+        long tempoInizio = System.currentTimeMillis();
+        // Creazione degli oggetti Giocatore
         Giocatore g1 = new Giocatore("Giocatore 1");
         Giocatore g2 = new Giocatore("Giocatore 2");
 
+        // Creazione degli oggetti Thread
         Thread g1Thread = new Thread(g1);
         Thread g2Thread = new Thread(g2);
 
@@ -36,6 +40,10 @@ public class GiocaNumeri {
         getInfoThread(g1Thread);
         getInfoThread(g2Thread);
         getInfoThread(Thread.currentThread());
+
+        long tempoFine = System.currentTimeMillis() - tempoInizio;
+
+        System.out.println("Tempo trascorso per l'esecuzione del programma (s): " + (tempoFine/1000.0));
     }
 
     /**
