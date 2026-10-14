@@ -97,9 +97,6 @@ secondi per giocatore**. Poiché i due thread lavorano in parallelo, la durata t
 vicina a quella di un singolo conteggio, non alla somma dei due. Il tempo effettivo può variare in base al sistema e
 alla pianificazione dei thread.
 
-> Nota: il valore chiamato `Tempo di esecuzione del Thread` nel messaggio del giocatore è calcolato a partire dalla
-> creazione dell'oggetto `Giocatore`, non dall'istante esatto in cui viene avviato il thread.
-
 ## Requisiti
 
 - **JDK 25 o successivo**, perché il metodo di avvio è dichiarato `static void main()` senza parametri,

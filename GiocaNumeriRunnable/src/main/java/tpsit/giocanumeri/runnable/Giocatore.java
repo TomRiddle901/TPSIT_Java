@@ -8,7 +8,7 @@ public class Giocatore implements Runnable{
     private String nome;
     private String parola;
     private int punteggio;
-    private long tempoInizio = System.currentTimeMillis();
+    private static long tempoInizio = 0;
 
     /**
      * Costruttore classe Giocatore
@@ -73,6 +73,7 @@ public class Giocatore implements Runnable{
      */
     @Override
     public void run(){
+        tempoInizio = System.currentTimeMillis();
         gioca();
         comunica();
     }
