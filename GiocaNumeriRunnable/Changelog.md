@@ -7,11 +7,12 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ## [0.2.0] 14/10/2026
 
 ### Aggiunto
-- Stampa dell'ID del Thread dei giocatore corrente
-- Stampa del Nome del Thread del giocatore corrente
-- Stampa della Priorità del Thread del giocatore corrente
-- Stampa dello stato del Thread del giocatore corrente
-- Metodo `getInfoThread()` per visualizzare lo stato del Thread corrente all'interno del main
+- Stampa dell'ID del Thread dei giocatore corrente;
+- Stampa del Nome del Thread del giocatore corrente;
+- Stampa della Priorità del Thread del giocatore corrente;
+- Stampa dello stato del Thread del giocatore corrente;
+- Metodo `getInfoThread()` per visualizzare lo stato del Thread corrente all'interno del main;
+- Calcolo del tempo di esecuzione totale del programma (Thread `main`);
 
 ---
 

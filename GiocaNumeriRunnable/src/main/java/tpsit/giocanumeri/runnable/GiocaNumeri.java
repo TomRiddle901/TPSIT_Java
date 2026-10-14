@@ -19,14 +19,15 @@ public class GiocaNumeri {
         // Ottieni le informazioni sul Thread corrente (main)
         getInfoThread(Thread.currentThread());
 
+        // Rallenta i Thread per avere un output più pulito sulle informazioni dei Thread
         try {
-            Thread.currentThread().sleep(2000);
+            Thread.sleep(1);
+            g1Thread.start();
+            Thread.sleep(2);
+            g2Thread.start();
         } catch (InterruptedException interruptedEx) {
             System.err.println("Errore nella transizione del Thread da running a sleeping");
         }
-
-        g1Thread.start();
-        g2Thread.start();
 
         // Aspetto che i Thread dei giocatori siano terminati
         try{
