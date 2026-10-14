@@ -13,6 +13,12 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Stampa dello stato del Thread del giocatore corrente;
 - Metodo `getInfoThread()` per visualizzare lo stato del Thread corrente all'interno del main;
 - Calcolo del tempo di esecuzione totale del programma (Thread `main`);
+- Calcolo del tempo di esecuzione dei singoli Thread
+
+### Documentazione
+- Libro di testo *Project Work Volume 2*;
+- Corso Java <a href="https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza">online</a> fornito a scuola;
+- Presentazione fornito dalla docente di TPSIT.
 
 ---
 
