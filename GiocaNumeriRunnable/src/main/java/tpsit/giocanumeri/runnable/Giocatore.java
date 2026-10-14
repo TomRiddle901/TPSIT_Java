@@ -49,7 +49,7 @@ public class Giocatore implements Runnable{
     }
 
     /**
-     * Comunica nome, punteggio e parola del giocatore
+     * Visualizza nome, punteggio e parola del giocatore e il tempo di esecuzione del Thread
      */
     private void comunica(){
         long tempoFine = System.currentTimeMillis() - tempoInizio;
