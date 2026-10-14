@@ -12,7 +12,27 @@ public class GiocaNumeri {
         Thread g1Thread = new Thread(g1);
         Thread g2Thread = new Thread(g2);
 
+        // Ottieni le informazioni sul Thread corrente (main)
+        getInfoThread(Thread.currentThread());
+
+        try {
+            Thread.currentThread().sleep(2000);
+        } catch (InterruptedException interruptedEx) {
+            System.err.println("Errore nella transizione del Thread da running a sleeping");
+        }
+
         g1Thread.start();
         g2Thread.start();
+    }
+
+    /**
+     * Visualizza id, nome, priorità e stato del Thread corrente
+     * @param thread Thread in esecuzione
+     */
+    public static void getInfoThread(Thread thread){
+        System.out.println("ID: " + thread.threadId());
+        System.out.println("Nome: " + thread.getName());
+        System.out.println("Priorità: " + thread.getPriority());
+        System.out.println("Stato: " + thread.getState());
     }
 }

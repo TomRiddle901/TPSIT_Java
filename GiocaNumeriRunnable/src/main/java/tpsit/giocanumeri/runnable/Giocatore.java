@@ -53,7 +53,6 @@ public class Giocatore implements Runnable{
      */
     public void comunica(){
         System.out.println(nome + ": " + punteggio + "pt ha scelto la parola: " + parola);
-        getDettagli();
     }
 
     public void getDettagli(){
@@ -61,6 +60,7 @@ public class Giocatore implements Runnable{
         System.out.println("Nome: " + Thread.currentThread().getName());
         System.out.println("Priorità: " + Thread.currentThread().getPriority());
         System.out.println("Stato: " + Thread.currentThread().getState());
+        System.out.println("------------------------------");
     }
 
     /**
