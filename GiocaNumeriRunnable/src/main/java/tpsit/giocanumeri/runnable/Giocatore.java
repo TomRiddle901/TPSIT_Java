@@ -52,11 +52,14 @@ public class Giocatore implements Runnable{
      * Comunica nome, punteggio e parola del giocatore
      */
     public void comunica(){
-        long tempoFine = System.currentTimeMillis();
+        long tempoFine = System.currentTimeMillis() - tempoInizio;
         System.out.println(nome + ": " + punteggio + "pt ha scelto la parola: " + parola);
         System.out.println("Tempo di esecuzione del Thread (s): " + (tempoFine/1000.0));
     }
 
+    /**
+     * Stampa dei dettagli del Thread corrente
+     */
     public void getDettagli(){
         System.out.println("ID: " + Thread.currentThread().threadId());
         System.out.println("Nome: " + Thread.currentThread().getName());
