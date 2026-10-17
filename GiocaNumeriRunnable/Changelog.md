@@ -4,6 +4,17 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## [0.2.1] 17/10/2026
+
+### Modificato
+- Corretto calcolo e la visualizzazione dei tempi di esecuzione dei Thread dei giocatori.
+
+### Documentazione
+- Libro di testo *Project Work Volume 2*;
+- Presentazione fornita dalla docente di TPSIT.
+
+---
+
 ## [0.2.0] 14/10/2026
 
 ### Aggiunto
@@ -17,8 +28,8 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ### Documentazione
 - Libro di testo *Project Work Volume 2*;
-- Corso Java <a href="https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza">online</a> fornito a scuola;
-- Presentazione fornito dalla docente di TPSIT.
+- [Corso Java online](https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza) fornito a scuola;
+- Presentazione fornita dalla docente di TPSIT.
 
 ---
 
