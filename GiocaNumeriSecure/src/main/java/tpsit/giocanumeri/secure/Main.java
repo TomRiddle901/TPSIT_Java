@@ -8,11 +8,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int a = 10;
-        int b;
+        int b = 0;
         int c;
 
-        System.out.print("Inscerisci un numero: ");
-        b = scanner.nextInt();
+        try{
+            System.out.print("Inscerisci un numero: ");
+            b = scanner.nextInt();
+        }catch (InputMismatchException inputMismatchEx){
+            System.err.println("Errore: valore inserito non valido, deve essere un numero.");
+            inputMismatchEx.printStackTrace();
+        }
+
 
         try{
             c = a/b;
@@ -20,9 +26,6 @@ public class Main {
         }catch (ArithmeticException arithmeticEx){
             System.err.println("Attenzione! Errore nel calcolo della divisione.");
             arithmeticEx.printStackTrace();
-        }catch (InputMismatchException inputMismatchEx){
-            System.err.println("Errore: valore inserito non valido, deve essere un numero.");
-            inputMismatchEx.printStackTrace();
         }
 
         scanner.close();
