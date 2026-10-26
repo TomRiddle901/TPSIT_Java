@@ -16,7 +16,7 @@ public class Main {
 
         try{
             c = a/b;
-            System.out.println(c); // Questo output non verrà mostrato
+            System.out.println("Risultato divisione: " + c); // Questo output non verrà mostrato
         }catch (ArithmeticException arithmeticEx){
             System.err.println("Attenzione! Errore nel calcolo della divisione.");
             arithmeticEx.printStackTrace();
