@@ -5,15 +5,20 @@ import java.util.Scanner;
 
 public class Main {
     static void main() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner inputStream = new Scanner(System.in);
 
-        int a = 10;
+        int a;
         int b;
         int c;
 
         try{
-            System.out.print("Inscerisci un numero: ");
-            b = scanner.nextInt();
+            System.out.print("Inscerisci il numeratore: ");
+            a = inputStream.nextInt();
+            inputStream.nextLine(); // Pulisce il buffer di input
+
+            System.out.print("Inserisci il denominatore: ");
+            b = inputStream.nextInt();
+            inputStream.nextLine();
 
             c = a/b;
             System.out.println("Risultato divisione: " + c); // Questo output non verrà mostrato
@@ -25,6 +30,6 @@ public class Main {
             inputMismatchEx.printStackTrace();
         }
 
-        scanner.close();
+        inputStream.close();
     }
 }
