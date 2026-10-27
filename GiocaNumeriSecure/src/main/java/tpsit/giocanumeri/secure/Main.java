@@ -6,10 +6,7 @@ import java.util.Scanner;
 public class Main {
     static void main() {
         Scanner inputStream = new Scanner(System.in);
-
-        int a;
-        int b;
-        int c;
+        int a, b, c;
 
         try{
             System.out.print("Inscerisci il numeratore: ");
