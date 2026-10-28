@@ -8,7 +8,7 @@ public class Main {
     static void main() {
         Scanner scanner = new Scanner(System.in); // classe scanner utilizzata per l'input dei numeri
         int a, b, c;
-        String testo, riga;
+        String testo = "", riga = "";
         File file = new File("prova.txt");
 
         // Input da tastiera per inserire una parola/frase/lettera
@@ -59,6 +59,8 @@ public class Main {
 
             c = a/b;
             System.out.println("Risultato divisione: " + c); // Questo output non verrà mostrato se ci sono errori
+            System.out.println("Testo o parola: " + testo);
+            System.out.println("Prima riga del file prova.txt: " + riga);
         }catch (ArithmeticException arithmeticEx){
             System.err.println("Errore: si è verificato un problema durante il calcolo della divisione.");
             arithmeticEx.printStackTrace();
