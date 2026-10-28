@@ -55,7 +55,7 @@ public class Main {
             b = Integer.parseInt(tastiera.readLine());
 
             c = a/b;
-            System.out.println("Risultato divisione: " + c); // Questo output non verrà mostrato se ci sono errori
+            System.out.println("Risultato divisione: " + c);
             System.out.println("Testo o parola: " + testo);
             System.out.println("Prima riga del file prova.txt: " + riga);
         }catch (ArithmeticException arithmeticEx){
