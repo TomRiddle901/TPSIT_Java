@@ -17,7 +17,7 @@ public class Main {
         try {
             testo = tastiera.readLine();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.err.println("Errore di comunicazione della tastiera con la RAM.");
         }
 
         try{
