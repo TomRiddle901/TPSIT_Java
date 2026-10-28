@@ -16,7 +16,6 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Presentazioni PowerPoint della docente di TPSIT
 - Documentazione ufficiale Java di Oracle
 
----
 
 ## [0.0.1] 26/10/2026
 
