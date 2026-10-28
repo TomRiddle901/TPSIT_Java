@@ -6,11 +6,12 @@ import java.util.Scanner;
 
 public class Main {
     static void main() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // classe scanner utilizzata per l'input dei numeri
         int a, b, c;
         String testo, riga;
         File file = new File("prova.txt");
 
+        // Input da tastiera per inserire una parola/frase/lettera
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         try {
             testo = tastiera.readLine();
@@ -18,8 +19,9 @@ public class Main {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
         }
 
+        // Input del file prova.txt
         InputStream inputStreamFile = null;
-        BufferedReader bufferFile = null;
+        BufferedReader bufferFile;
         try {
             inputStreamFile = new FileInputStream(file);
 
@@ -31,10 +33,12 @@ public class Main {
         }catch (IOException ioException){
             System.err.println("Errore nella lettura del file.");
         }finally {
-            try {
-                inputStreamFile.close();
-            } catch (IOException e) {
-                System.err.println("Errore nella chiusura dello Stream.");
+            if (inputStreamFile != null){
+                try {
+                    inputStreamFile.close();
+                } catch (IOException e) {
+                    System.err.println("Errore nella chiusura dello Stream.");
+                }
             }
         }
 
