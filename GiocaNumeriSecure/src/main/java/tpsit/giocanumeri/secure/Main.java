@@ -8,7 +8,7 @@ public class Main {
     static void main() {
         Scanner scanner = new Scanner(System.in);
         int a, b, c;
-        String testo;
+        String testo, riga;
         File file = new File("prova.txt");
 
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
@@ -19,12 +19,17 @@ public class Main {
         }
 
         InputStream inputStreamFile;
+        BufferedReader bufferFile;
         try {
             inputStreamFile = new FileInputStream(file);
 
-            BufferedReader bufferFile = new BufferedReader(new InputStreamReader(inputStreamFile));
+            bufferFile = new BufferedReader(new InputStreamReader(inputStreamFile));
+
+            riga = bufferFile.readLine();
         } catch (FileNotFoundException fileNotFoundEx) {
             System.err.println("Errore: file non trovato.");
+        }catch (IOException ioException){
+            System.err.println("Errore nella lettura del file.");
         }
 
         try{
