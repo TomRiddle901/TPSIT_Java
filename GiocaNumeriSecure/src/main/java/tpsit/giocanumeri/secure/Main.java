@@ -1,16 +1,15 @@
 package tpsit.giocanumeri.secure;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     static void main() {
-        Scanner inputStream = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int a, b, c;
         String testo;
+        File file = new File("prova.txt");
 
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
 
@@ -20,14 +19,21 @@ public class Main {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
         }
 
+        InputStream inputStream;
+        try {
+            inputStream = new FileInputStream(file);
+        } catch (FileNotFoundException fileNotFoundEx) {
+            System.err.println("Errore: file non trovato.");
+        }
+
         try{
             System.out.print("Inscerisci il numeratore: ");
-            a = inputStream.nextInt();
+            a = scanner.nextInt();
             inputStream.nextLine(); // Pulisce il buffer di input
 
             System.out.print("Inserisci il denominatore: ");
-            b = inputStream.nextInt();
-            inputStream.nextLine();
+            b = scanner.nextInt();
+            scanner.nextLine();
 
             c = a/b;
             System.out.println("Risultato divisione: " + c); // Questo output non verrà mostrato se ci sono errori
@@ -39,6 +45,6 @@ public class Main {
             inputMismatchEx.printStackTrace();
         }
 
-        inputStream.close();
+        scanner.close();
     }
 }
