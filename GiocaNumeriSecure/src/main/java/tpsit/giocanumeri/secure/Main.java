@@ -18,8 +18,8 @@ public class Main {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
         }
 
-        InputStream inputStreamFile;
-        BufferedReader bufferFile;
+        InputStream inputStreamFile = null;
+        BufferedReader bufferFile = null;
         try {
             inputStreamFile = new FileInputStream(file);
 
@@ -30,6 +30,12 @@ public class Main {
             System.err.println("Errore: file non trovato.");
         }catch (IOException ioException){
             System.err.println("Errore nella lettura del file.");
+        }finally {
+            try {
+                inputStreamFile.close();
+            } catch (IOException e) {
+                System.err.println("Errore nella chiusura dello Stream.");
+            }
         }
 
         try{
