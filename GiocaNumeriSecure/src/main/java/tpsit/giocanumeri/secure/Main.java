@@ -14,6 +14,7 @@ public class Main {
         // Input da tastiera per inserire una parola/frase/lettera
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         try {
+            System.out.print("Inserisci una lettera/parola/frase: ");
             testo = tastiera.readLine();
         } catch (IOException e) {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
