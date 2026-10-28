@@ -17,6 +17,12 @@ public class Main {
             testo = tastiera.readLine();
         } catch (IOException e) {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
+        }finally {
+            try {
+                tastiera.close();
+            } catch (IOException e) {
+                System.err.println("Errore nella chiusura dello stream di input della tastiera");
+            }
         }
 
         // Input del file prova.txt
@@ -37,7 +43,7 @@ public class Main {
                 try {
                     inputStreamFile.close();
                 } catch (IOException e) {
-                    System.err.println("Errore nella chiusura dello Stream.");
+                    System.err.println("rrore nella chiusura dello stream di input del file prova.txt");
                 }
             }
         }
