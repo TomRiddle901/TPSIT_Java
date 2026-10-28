@@ -12,16 +12,17 @@ public class Main {
         File file = new File("prova.txt");
 
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
-
         try {
             testo = tastiera.readLine();
         } catch (IOException e) {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
         }
 
-        InputStream inputStream;
+        InputStream inputStreamFile;
         try {
-            inputStream = new FileInputStream(file);
+            inputStreamFile = new FileInputStream(file);
+
+            BufferedReader bufferFile = new BufferedReader(new InputStreamReader(inputStreamFile));
         } catch (FileNotFoundException fileNotFoundEx) {
             System.err.println("Errore: file non trovato.");
         }
@@ -29,7 +30,7 @@ public class Main {
         try{
             System.out.print("Inscerisci il numeratore: ");
             a = scanner.nextInt();
-            inputStream.nextLine(); // Pulisce il buffer di input
+            scanner.nextLine(); // Pulisce il buffer di input
 
             System.out.print("Inserisci il denominatore: ");
             b = scanner.nextInt();
