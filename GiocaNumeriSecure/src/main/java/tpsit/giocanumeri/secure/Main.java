@@ -2,14 +2,12 @@ package tpsit.giocanumeri.secure;
 
 import java.io.*;
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Main {
     static void main() {
-        Scanner scanner = new Scanner(System.in); // classe scanner utilizzata per l'input dei numeri
         int a, b, c;
         String testo = "", riga = "";
-        File file = new File("prova.txt");
+        File file = new File("GiocaNumeriSecure/prova.txt");
 
         // Input da tastiera per inserire una parola/frase/lettera
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
@@ -44,19 +42,17 @@ public class Main {
                 try {
                     inputStreamFile.close();
                 } catch (IOException e) {
-                    System.err.println("rrore nella chiusura dello stream di input del file prova.txt");
+                    System.err.println("Errore nella chiusura dello stream di input del file prova.txt");
                 }
             }
         }
 
         try{
             System.out.print("Inscerisci il numeratore: ");
-            a = scanner.nextInt();
-            scanner.nextLine(); // Pulisce il buffer di input
+            a = Integer.parseInt(tastiera.readLine());
 
             System.out.print("Inserisci il denominatore: ");
-            b = scanner.nextInt();
-            scanner.nextLine();
+            b = Integer.parseInt(tastiera.readLine());
 
             c = a/b;
             System.out.println("Risultato divisione: " + c); // Questo output non verrà mostrato se ci sono errori
@@ -68,8 +64,9 @@ public class Main {
         }catch (InputMismatchException inputMismatchEx){
             System.err.println("Errore: valore inserito non valido, deve essere un numero.");
             inputMismatchEx.printStackTrace();
+        }catch (IOException ioException){
+            System.err.println("Errore di comunicazione della tastiera con la RAM.");
+            ioException.printStackTrace();
         }
-
-        scanner.close();
     }
 }
