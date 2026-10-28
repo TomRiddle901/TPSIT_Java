@@ -1,5 +1,8 @@
 package tpsit.giocanumeri.secure;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,6 +10,15 @@ public class Main {
     static void main() {
         Scanner inputStream = new Scanner(System.in);
         int a, b, c;
+        String testo;
+
+        BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
+
+        try {
+            testo = tastiera.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         try{
             System.out.print("Inscerisci il numeratore: ");
