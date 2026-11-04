@@ -18,17 +18,6 @@ public class Main {
         catch (IOException e) {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
         }
-        finally {
-            try {
-                tastiera.close();
-            }
-            catch (IOException e) {
-                System.err.println("Errore nella chiusura dello stream di input della tastiera");
-            }catch (NullPointerException nullPointerEx){
-                System.err.println("Errore nel puntatore (forse è null?)");
-                nullPointerEx.printStackTrace();
-            }
-        }
 
         // Input del file prova.txt
         InputStream inputStreamFile = null;
