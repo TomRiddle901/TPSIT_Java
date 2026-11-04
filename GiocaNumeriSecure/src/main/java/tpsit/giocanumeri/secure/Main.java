@@ -54,6 +54,18 @@ public class Main {
             }
         }
 
+        // Scrittura su un file
+        BufferedWriter bufferWriter;
+        try{
+            bufferWriter = new BufferedWriter(new FileWriter("prova.txt"));
+
+            bufferWriter.write("Testo nuovo inserito");
+            bufferWriter.flush();
+        }catch (IOException ioException){
+            System.err.println("Errore di apertura del file.");
+            ioException.printStackTrace();
+        }
+
         try{
             System.out.print("Inscerisci il numeratore: ");
             a = Integer.parseInt(tastiera.readLine());
