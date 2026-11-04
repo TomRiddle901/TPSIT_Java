@@ -10,6 +10,8 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Gestite le eccezioni nella scrittura del file
 - Gestite le chiusure del `BufferedWriter` e di `FileWriter`
 - Creata classe `DemoException` per esercitazione all'utilizzo di `throws Exception`
+- Aggiunta somma di 2 numeri con eccezione personalizzata
+- Agguinto prodotto di un numero con eccezione personalizzata
 
 ### Documentazione
 - Presentazion PowerPoint della docente di TPSIT
