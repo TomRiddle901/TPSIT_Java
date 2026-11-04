@@ -9,6 +9,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Srittura del file di testo `BufferedWriter` e `FileWriter`
 - Gestite le eccezioni nella scrittura del file
 - Gestite le chiusure del `BufferedWriter` e di `FileWriter`
+- Creata classe `DemoException` per esercitazione all'utilizzo di `throws Exception`
 
 ### Documentazione
 - Presentazion PowerPoint della docente di TPSIT
