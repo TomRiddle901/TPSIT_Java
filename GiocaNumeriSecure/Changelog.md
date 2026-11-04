@@ -4,6 +4,15 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## [0.0.3] 04/11/2026
+### Aggiunto
+- Srittura del file di testo `BufferedWriter` e `FileWriter`
+- Gestite le eccezioni nella scrittura del file
+- Gestite le chiusure del `BufferedWriter` e di `FileWriter`
+
+### Documentazione
+- Presentazion PowerPoint della docente di TPSIT
+
 ## [0.0.2] 28/10/2026
 ### Aggiunto
 - Lettura di input di testo da tastiera utilizzando le classi `BufferedReader` e `InputStreamReader`
