@@ -10,8 +10,9 @@ public class Main {
         File file = new File("GiocaNumeriSecure/prova.txt");
 
         // Input da tastiera per inserire una parola/frase/lettera
-        BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter tastiera = null;
         try {
+            BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
             System.out.print("Inserisci una lettera/parola/frase: ");
             testo = tastiera.readLine();
         }
@@ -24,6 +25,9 @@ public class Main {
             }
             catch (IOException e) {
                 System.err.println("Errore nella chiusura dello stream di input della tastiera");
+            }catch (NullPointerException nullPointerEx){
+                System.err.println("Errore nel puntatore (forse è null?)");
+                nullPointerEx.printStackTrace();
             }
         }
 
@@ -57,7 +61,7 @@ public class Main {
         // Scrittura su un file
         BufferedWriter bufferWriter = null;
         try{
-            bufferWriter = new BufferedWriter(new FileWriter("prova.txt"));
+            bufferWriter = new BufferedWriter(new FileWriter(file));
 
             bufferWriter.write("Testo nuovo inserito");
             bufferWriter.flush();
@@ -76,12 +80,15 @@ public class Main {
             }
         }
 
+
         try{
+            BufferedReader tastieraInteri = new BufferedReader(new InputStreamReader(System.in));
+
             System.out.print("Inscerisci il numeratore: ");
-            a = Integer.parseInt(tastiera.readLine());
+            a = Integer.parseInt(tastieraInteri.readLine());
 
             System.out.print("Inserisci il denominatore: ");
-            b = Integer.parseInt(tastiera.readLine());
+            b = Integer.parseInt(tastieraInteri.readLine());
 
             c = a/b;
 
