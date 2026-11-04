@@ -108,9 +108,10 @@ public class Main {
             ioException.printStackTrace();
         }
 
-        DemoException somma = new DemoException();
+        DemoException demo = new DemoException();
         try {
-            somma.somma(10, 11);
+            demo.somma(10, 11);
+            demo.prodotto(2);
         } catch (Exception exception) {
             System.err.println("Errore genrico, controllare stackTrace");
             exception.printStackTrace();
