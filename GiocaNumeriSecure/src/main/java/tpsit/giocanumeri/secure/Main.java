@@ -10,9 +10,8 @@ public class Main {
         File file = new File("GiocaNumeriSecure/prova.txt");
 
         // Input da tastiera per inserire una parola/frase/lettera
-        BufferedWriter tastiera = null;
+        BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         try {
-            BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
             System.out.print("Inserisci una lettera/parola/frase: ");
             testo = tastiera.readLine();
         }
