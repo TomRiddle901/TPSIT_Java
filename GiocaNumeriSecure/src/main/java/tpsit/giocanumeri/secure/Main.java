@@ -81,13 +81,11 @@ public class Main {
 
 
         try{
-            BufferedReader tastieraInteri = new BufferedReader(new InputStreamReader(System.in));
-
             System.out.print("Inscerisci il numeratore: ");
-            a = Integer.parseInt(tastieraInteri.readLine());
+            a = Integer.parseInt(tastiera.readLine());
 
             System.out.print("Inserisci il denominatore: ");
-            b = Integer.parseInt(tastieraInteri.readLine());
+            b = Integer.parseInt(tastiera.readLine());
 
             c = a/b;
 
