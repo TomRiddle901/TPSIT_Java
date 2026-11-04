@@ -55,7 +55,7 @@ public class Main {
         }
 
         // Scrittura su un file
-        BufferedWriter bufferWriter;
+        BufferedWriter bufferWriter = null;
         try{
             bufferWriter = new BufferedWriter(new FileWriter("prova.txt"));
 
@@ -64,6 +64,13 @@ public class Main {
         }catch (IOException ioException){
             System.err.println("Errore di apertura del file.");
             ioException.printStackTrace();
+        }finally {
+            try {
+                bufferWriter.close();
+            } catch (IOException ioException) {
+                System.err.println("Errore nella chiusura del file.");
+                ioException.printStackTrace();
+            }
         }
 
         try{
