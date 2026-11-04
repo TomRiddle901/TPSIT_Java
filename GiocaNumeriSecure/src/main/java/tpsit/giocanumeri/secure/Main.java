@@ -101,5 +101,13 @@ public class Main {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
             ioException.printStackTrace();
         }
+
+        DemoException somma = new DemoException();
+        try {
+            somma.somma(10, 11);
+        } catch (Exception exception) {
+            System.err.println("Errore genrico, controllare stackTrace");
+            exception.printStackTrace();
+        }
     }
 }
