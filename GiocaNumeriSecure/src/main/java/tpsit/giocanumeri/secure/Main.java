@@ -67,9 +67,12 @@ public class Main {
         }finally {
             try {
                 bufferWriter.close();
-            } catch (IOException ioException) {
+            }catch (IOException ioException) {
                 System.err.println("Errore nella chiusura del file.");
                 ioException.printStackTrace();
+            }catch (NullPointerException nullPointerEx){
+                System.err.println("Errore nel puntatore (forse è null?)");
+                nullPointerEx.printStackTrace();
             }
         }
 
