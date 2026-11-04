@@ -13,6 +13,10 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Aggiunta somma di 2 numeri con eccezione personalizzata
 - Agguinto prodotto di un numero con eccezione personalizzata
 
+### Fixed
+- Rimosso blocco `finally` alla fine del primo input da tastiera
+- Aggiunta gestione di `NullPointerException` su alcune variabili
+
 ### Documentazione
 - Presentazion PowerPoint della docente di TPSIT
 
