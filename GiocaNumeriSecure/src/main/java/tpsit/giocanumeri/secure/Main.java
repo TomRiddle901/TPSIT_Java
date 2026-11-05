@@ -15,8 +15,9 @@ public class Main {
             System.out.print("Inserisci una lettera/parola/frase: ");
             testo = tastiera.readLine();
         }
-        catch (IOException e) {
+        catch (IOException ioException) {
             System.err.println("Errore di comunicazione della tastiera con la RAM.");
+            ioException.printStackTrace();
         }
 
         // Input del file prova.txt
@@ -31,17 +32,20 @@ public class Main {
         }
         catch (FileNotFoundException fileNotFoundEx) {
             System.err.println("Errore: file non trovato.");
+            fileNotFoundEx.printStackTrace();
         }
         catch (IOException ioException){
             System.err.println("Errore nella lettura del file.");
+            ioException.printStackTrace();
         }
         finally {
             if (inputStreamFile != null){
                 try {
                     inputStreamFile.close();
                 }
-                catch (IOException e) {
+                catch (IOException ioException) {
                     System.err.println("Errore nella chiusura dello stream di input del file prova.txt");
+                    ioException.printStackTrace();
                 }
             }
         }
