@@ -1,0 +1,111 @@
+package tpsit.giocanumeri.secure;
+
+import java.io.*;
+import java.util.InputMismatchException;
+
+public class Main {
+    static void main() {
+        int a, b, c;
+        String testo = "", riga = "";
+        File file = new File("GiocaNumeriSecure/prova.txt");
+
+        // Input da tastiera per inserire una parola/frase/lettera
+        BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            System.out.print("Inserisci una lettera/parola/frase: ");
+            testo = tastiera.readLine();
+        }
+        catch (IOException ioException) {
+            System.err.println("Errore di comunicazione della tastiera con la RAM.");
+            ioException.printStackTrace();
+        }
+
+        // Input del file prova.txt
+        InputStream inputStreamFile = null;
+        BufferedReader bufferFile;
+        try {
+            inputStreamFile = new FileInputStream(file);
+
+            bufferFile = new BufferedReader(new InputStreamReader(inputStreamFile));
+
+            riga = bufferFile.readLine();
+        }
+        catch (FileNotFoundException fileNotFoundEx) {
+            System.err.println("Errore: file non trovato.");
+            fileNotFoundEx.printStackTrace();
+        }
+        catch (IOException ioException){
+            System.err.println("Errore nella lettura del file.");
+            ioException.printStackTrace();
+        }
+        finally {
+            if (inputStreamFile != null){
+                try {
+                    inputStreamFile.close();
+                }
+                catch (IOException ioException) {
+                    System.err.println("Errore nella chiusura dello stream di input del file prova.txt");
+                    ioException.printStackTrace();
+                }
+            }
+        }
+
+        // Scrittura su un file
+        BufferedWriter bufferWriter = null;
+        try{
+            bufferWriter = new BufferedWriter(new FileWriter(file));
+
+            bufferWriter.write("Testo nuovo inserito");
+            bufferWriter.flush();
+        }catch (IOException ioException){
+            System.err.println("Errore di apertura del file.");
+            ioException.printStackTrace();
+        }finally {
+            try {
+                bufferWriter.close();
+            }catch (IOException ioException) {
+                System.err.println("Errore nella chiusura del file.");
+                ioException.printStackTrace();
+            }catch (NullPointerException nullPointerEx){
+                System.err.println("Errore nel puntatore (forse è null?)");
+                nullPointerEx.printStackTrace();
+            }
+        }
+
+
+        try{
+            System.out.print("Inscerisci il numeratore: ");
+            a = Integer.parseInt(tastiera.readLine());
+
+            System.out.print("Inserisci il denominatore: ");
+            b = Integer.parseInt(tastiera.readLine());
+
+            c = a/b;
+
+            System.out.println("Risultato divisione: " + c);
+            System.out.println("Testo o parola: " + testo);
+            System.out.println("Prima riga del file prova.txt: " + riga);
+        }
+        catch (ArithmeticException arithmeticEx){
+            System.err.println("Errore: si è verificato un problema durante il calcolo della divisione.");
+            arithmeticEx.printStackTrace();
+        }
+        catch (InputMismatchException inputMismatchEx){
+            System.err.println("Errore: valore inserito non valido, deve essere un numero.");
+            inputMismatchEx.printStackTrace();
+        }
+        catch (IOException ioException){
+            System.err.println("Errore di comunicazione della tastiera con la RAM.");
+            ioException.printStackTrace();
+        }
+
+        DemoException demo = new DemoException();
+        try {
+            demo.somma(10, 11);
+            demo.prodotto(2);
+        } catch (Exception exception) {
+            System.err.println("Errore genrico, controllare stackTrace");
+            exception.printStackTrace();
+        }
+    }
+}
