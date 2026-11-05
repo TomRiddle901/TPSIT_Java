@@ -4,6 +4,23 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## [0.0.4] 05/11/2026
+
+### Aggiunto
+- Aggiunti `printStackTrace()` mancanti
+
+### Fixed
+- `BufferedWriter`: ora non viene più chiuso fino a che non serve più
+- Rinominati alcuni attributi delle eccezioni: pirma: `e`, ora: `ioException`, `fileNotFoundEx`, ecc...
+- Versione all'interno di `pom.xml` da 0.0.2 a 0.0.4 (coerente con la versione del progetto)
+
+### Aggiornamenti
+- Aggiornata versione di `Java` da `Amazon Corretto 26` e `Amazon Corretto 27.0.1`
+
+### Documentazione
+- Presentazion PowerPoint della docente di TPSIT
+- Google :/
+
 ## [0.0.3] 04/11/2026
 ### Aggiunto
 - Srittura del file di testo `BufferedWriter` e `FileWriter`
