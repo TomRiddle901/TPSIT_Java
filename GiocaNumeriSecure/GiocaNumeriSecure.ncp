@@ -1,0 +1,37 @@
+<Project>
+  <Name>GiocaNumeriSecure</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>GiocaNumeri</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>GiocaNumeri</Name>
+        <Access>Public</Access>
+        <Location left="77" top="147" />
+        <Size width="235" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void main()</Member>
+        <Member type="Method">public void getInfoThread(Thread thread)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Giocatore</Name>
+        <Access>Public</Access>
+        <Location left="362" top="240" />
+        <Size width="193" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String nome</Member>
+        <Member type="Field">private String parola</Member>
+        <Member type="Field">private int punteggio</Member>
+        <Member type="Constructor">public Giocatore(String nome)</Member>
+        <Member type="Method">public void setPunteggio(int punti)</Member>
+        <Member type="Method">private void gioca()</Member>
+        <Member type="Method">private void comunica()</Member>
+        <Member type="Method">private void getDettagli()</Member>
+        <Member type="Method">public void run()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+</Project>
