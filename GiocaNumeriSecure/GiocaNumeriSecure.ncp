@@ -7,7 +7,7 @@
       <Entity type="Class">
         <Name>GiocaNumeri</Name>
         <Access>Public</Access>
-        <Location left="77" top="147" />
+        <Location left="53" top="86" />
         <Size width="235" height="111" />
         <Collapsed>False</Collapsed>
         <Member type="Method">public void main()</Member>
@@ -17,7 +17,7 @@
       <Entity type="Class">
         <Name>Giocatore</Name>
         <Access>Public</Access>
-        <Location left="362" top="240" />
+        <Location left="192" top="297" />
         <Size width="193" height="230" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String nome</Member>
@@ -31,7 +31,101 @@
         <Member type="Method">public void run()</Member>
         <Modifier>None</Modifier>
       </Entity>
+      <Entity type="Class">
+        <Name>Thread</Name>
+        <Access>Public</Access>
+        <Location left="566" top="215" />
+        <Size width="170" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static final int MAX_PRIORITY</Member>
+        <Member type="Field">public static final int MIN_PRIORITY</Member>
+        <Member type="Field">public final int NORM_PRIORITY</Member>
+        <Member type="Constructor">public Thread()</Member>
+        <Member type="Constructor">public Thread(Runnable target)</Member>
+        <Member type="Constructor">public Thread(String name)</Member>
+        <Member type="Method">public static Thread currentThread()</Member>
+        <Member type="Method">public static void yield()</Member>
+        <Member type="Method">public static void sleep(long millis)</Member>
+        <Member type="Method">public void start()</Member>
+        <Member type="Method">public void run()</Member>
+        <Member type="Method">public void stop()</Member>
+        <Member type="Method">public void join()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Object</Name>
+        <Access>Public</Access>
+        <Location left="825" top="47" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void notify()</Member>
+        <Member type="Method">public void notifyAll()</Member>
+        <Member type="Method">public void wait()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>Runnable</Name>
+        <Access>Public</Access>
+        <Location left="877" top="333" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void run()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>Cifrario</Name>
+        <Access>Public</Access>
+        <Location left="328" top="620" />
+        <Size width="199" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public String cifra(String daCifrare)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
     </Entities>
-    <Relationships />
+    <Relationships>
+      <Relationship type="Dependency" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>143</X>
+          <Y>256</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>287</X>
+          <Y>266</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>629</X>
+          <Y>169</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="2" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="1" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>334</X>
+          <Y>569</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>852</X>
+          <Y>517</Y>
+        </BendPoint>
+      </Relationship>
+    </Relationships>
   </ProjectItem>
 </Project>
