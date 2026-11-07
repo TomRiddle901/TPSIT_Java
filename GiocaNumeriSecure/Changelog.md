@@ -4,6 +4,14 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## [0.1.0] 07/11/2026
+### Aggionto
+- Recuperato il codice del vecchio progetto `GiocaNumeri`
+- Creato diagramma UML della nuova esercitazione
+
+### Documentazione
+- Materiale del docente di TPSIT
+
 ## [0.0.4] 05/11/2026
 
 ### Aggiunto
