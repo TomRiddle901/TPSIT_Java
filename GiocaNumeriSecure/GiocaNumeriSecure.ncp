@@ -17,16 +17,19 @@
       <Entity type="Class">
         <Name>Giocatore</Name>
         <Access>Public</Access>
-        <Location left="496" top="607" />
-        <Size width="253" height="247" />
+        <Location left="496" top="606" />
+        <Size width="253" height="298" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String nome</Member>
-        <Member type="Field">private Cifrario parola</Member>
+        <Member type="Field">private String parolaCifrata</Member>
         <Member type="Field">private int punteggio</Member>
+        <Member type="Field">private File file</Member>
         <Member type="Constructor">public Giocatore(String nome)</Member>
         <Member type="Method">public void setPunteggio(int punti)</Member>
         <Member type="Method">public void setParola(String parolaDaCifrare)</Member>
         <Member type="Method">private void gioca()</Member>
+        <Member type="Method">private void salva()</Member>
+        <Member type="Method">private void apri()</Member>
         <Member type="Method">private void comunica()</Member>
         <Member type="Method">private void getDettagli()</Member>
         <Member type="Method">public void run()</Member>
@@ -74,20 +77,6 @@
         <Collapsed>False</Collapsed>
         <Member type="Method">public void run()</Member>
       </Entity>
-      <Entity type="Class">
-        <Name>Cifrario</Name>
-        <Access>Public</Access>
-        <Location left="893" top="632" />
-        <Size width="199" height="179" />
-        <Collapsed>False</Collapsed>
-        <Member type="Field">private File fileCifrato</Member>
-        <Member type="Constructor">public Cifrario()</Member>
-        <Member type="Method">public String cifra(String daCifrare)</Member>
-        <Member type="Method">public void salva()</Member>
-        <Member type="Method">public void apri()</Member>
-        <Member type="Method">public String decifra()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Dependency" first="0" second="1">
@@ -101,7 +90,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>429</X>
-          <Y>745</Y>
+          <Y>744</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="1" second="2">
@@ -109,7 +98,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>518</X>
-          <Y>582</Y>
+          <Y>581</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>487</X>
@@ -137,18 +126,12 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>451</X>
-          <Y>631</Y>
+          <Y>630</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>85</X>
           <Y>563</Y>
         </BendPoint>
-      </Relationship>
-      <Relationship type="Dependency" first="1" second="5">
-        <Label>
-        </Label>
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
       </Relationship>
     </Relationships>
   </ProjectItem>
