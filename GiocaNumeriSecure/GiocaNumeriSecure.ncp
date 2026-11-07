@@ -57,7 +57,7 @@
       <Entity type="Class">
         <Name>Object</Name>
         <Access>Public</Access>
-        <Location left="161" top="74" />
+        <Location left="713" top="15" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Method">public void notify()</Member>
@@ -69,7 +69,7 @@
       <Entity type="Interface">
         <Name>Runnable</Name>
         <Access>Public</Access>
-        <Location left="635" top="10" />
+        <Location left="43" top="34" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Method">public void run()</Member>
@@ -78,8 +78,9 @@
         <Name>Cifrario</Name>
         <Access>Public</Access>
         <Location left="893" top="632" />
-        <Size width="199" height="162" />
+        <Size width="199" height="179" />
         <Collapsed>False</Collapsed>
+        <Member type="Field">private File fileCifrato</Member>
         <Member type="Constructor">public Cifrario()</Member>
         <Member type="Method">public String cifra(String daCifrare)</Member>
         <Member type="Method">public void salva()</Member>
@@ -90,7 +91,7 @@
       <Entity type="Class">
         <Name>Exception</Name>
         <Access>Public</Access>
-        <Location left="10" top="1205" />
+        <Location left="428" top="1128" />
         <Size width="184" height="111" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Exception()</Member>
@@ -101,7 +102,52 @@
         <Name>InterruptedException</Name>
         <Access>Public</Access>
         <Location left="349" top="912" />
+        <Size width="166" height="77" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>File</Name>
+        <Access>Public</Access>
+        <Location left="949" top="492" />
+        <Size width="163" height="77" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BufferedReader</Name>
+        <Access>Public</Access>
+        <Location left="1249" top="632" />
         <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public BufferedReader()</Member>
+        <Member type="Method">public String readLine()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>IOException</Name>
+        <Access>Public</Access>
+        <Location left="757" top="959" />
+        <Size width="163" height="77" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Throwable</Name>
+        <Access>Public</Access>
+        <Location left="439" top="1298" />
+        <Size width="163" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Throwable()</Member>
+        <Member type="Method">public void printStackTrace()</Member>
+        <Member type="Method">public String getMessage()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NullPointerException</Name>
+        <Access>Public</Access>
+        <Location left="998" top="959" />
+        <Size width="163" height="77" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
       </Entity>
@@ -137,28 +183,28 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>469</X>
-          <Y>179</Y>
+          <X>544</X>
+          <Y>172</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Realization" first="2" second="4">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>508</X>
-          <Y>85</Y>
+          <X>469</X>
+          <Y>148</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Realization" first="1" second="4">
-        <StartOrientation>Vertical</StartOrientation>
+        <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>640</X>
-          <Y>520</Y>
+          <X>451</X>
+          <Y>631</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>694</X>
-          <Y>362</Y>
+          <X>85</X>
+          <Y>563</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Dependency" first="1" second="5">
@@ -172,7 +218,7 @@
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>394</X>
-          <Y>1216</Y>
+          <Y>1077</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Dependency" first="0" second="7">
@@ -184,6 +230,54 @@
       <Relationship type="Dependency" first="1" second="7">
         <Label>
         </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="5" second="8">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>989</X>
+          <Y>607</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1043</X>
+          <Y>599</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="5" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="11">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="5" second="10">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="10" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="5" second="12">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="12" second="6">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
