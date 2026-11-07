@@ -18,14 +18,14 @@
         <Name>Giocatore</Name>
         <Access>Public</Access>
         <Location left="496" top="607" />
-        <Size width="193" height="247" />
+        <Size width="253" height="247" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String nome</Member>
-        <Member type="Field">private String parola</Member>
+        <Member type="Field">private Cifrario parola</Member>
         <Member type="Field">private int punteggio</Member>
         <Member type="Constructor">public Giocatore(String nome)</Member>
         <Member type="Method">public void setPunteggio(int punti)</Member>
-        <Member type="Method">public void setParola()</Member>
+        <Member type="Method">public void setParola(String parolaDaCifrare)</Member>
         <Member type="Method">private void gioca()</Member>
         <Member type="Method">private void comunica()</Member>
         <Member type="Method">private void getDettagli()</Member>
@@ -77,20 +77,32 @@
       <Entity type="Class">
         <Name>Cifrario</Name>
         <Access>Public</Access>
-        <Location left="761" top="688" />
-        <Size width="199" height="94" />
+        <Location left="893" top="632" />
+        <Size width="199" height="162" />
         <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Cifrario()</Member>
         <Member type="Method">public String cifra(String daCifrare)</Member>
+        <Member type="Method">public void salva()</Member>
+        <Member type="Method">public void apri()</Member>
+        <Member type="Method">public String decifra()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Exception</Name>
         <Access>Public</Access>
-        <Location left="779" top="837" />
+        <Location left="10" top="1205" />
         <Size width="184" height="111" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Exception()</Member>
         <Member type="Constructor">public Exception(String message)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InterruptedException</Name>
+        <Access>Public</Access>
+        <Location left="349" top="912" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
@@ -148,6 +160,32 @@
           <X>694</X>
           <Y>362</Y>
         </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="1" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>394</X>
+          <Y>1216</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="1" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
       </Relationship>
     </Relationships>
   </ProjectItem>
