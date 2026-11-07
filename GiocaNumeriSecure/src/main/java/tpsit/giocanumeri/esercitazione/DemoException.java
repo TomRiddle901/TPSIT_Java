@@ -1,4 +1,4 @@
-package tpsit.giocanumeri.secure;
+package tpsit.giocanumeri.esercitazione;
 
 public class DemoException {
     public int somma(int a, int b) throws Exception{

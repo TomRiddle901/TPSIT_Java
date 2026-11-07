@@ -1,4 +1,4 @@
-package tpsit.giocanumeri.secure;
+package tpsit.giocanumeri.esercitazione;
 
 import java.io.*;
 import java.util.InputMismatchException;
