@@ -24,12 +24,12 @@
         <Member type="Field">private String parolaCifrata</Member>
         <Member type="Field">private int punteggio</Member>
         <Member type="Field">private File file</Member>
-        <Member type="Constructor">public Giocatore(String nome)</Member>
+        <Member type="Constructor">public Giocatore(String nome, String parola)</Member>
         <Member type="Method">public void setPunteggio(int punti)</Member>
         <Member type="Method">public void setParola(String parolaDaCifrare)</Member>
         <Member type="Method">private void gioca()</Member>
-        <Member type="Method">private void salva()</Member>
-        <Member type="Method">private void apri()</Member>
+        <Member type="Method">private void salvaSuFile()</Member>
+        <Member type="Method">private void apriFile()</Member>
         <Member type="Method">private void comunica()</Member>
         <Member type="Method">private void getDettagli()</Member>
         <Member type="Method">public void run()</Member>
