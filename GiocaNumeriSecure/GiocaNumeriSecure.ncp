@@ -18,12 +18,13 @@
         <Name>Giocatore</Name>
         <Access>Public</Access>
         <Location left="496" top="606" />
-        <Size width="253" height="298" />
+        <Size width="253" height="315" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String nome</Member>
         <Member type="Field">private String parolaCifrata</Member>
         <Member type="Field">private int punteggio</Member>
         <Member type="Field">private File file</Member>
+        <Member type="Field">private int idGiocatore</Member>
         <Member type="Constructor">public Giocatore(String nome, String parola)</Member>
         <Member type="Method">public void setPunteggio(int punti)</Member>
         <Member type="Method">public void setParola(String parolaDaCifrare)</Member>
@@ -78,7 +79,7 @@
         <Member type="Method">public void run()</Member>
       </Entity>
       <Entity type="Class">
-        <Name>GestoreCrittografia</Name>
+        <Name>Cifrario</Name>
         <Access>Public</Access>
         <Location left="812" top="536" />
         <Size width="163" height="77" />
