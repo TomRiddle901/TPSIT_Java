@@ -13,8 +13,9 @@ public class Giocatore implements Runnable{
      * Costruttore classe Giocatore
      * @param nome Nome del giocatore
      */
-    public Giocatore(String nome){
+    public Giocatore(String nome, String parola){
         this.nome = nome;
+        this.parola = parola;
     }
 
     /**
