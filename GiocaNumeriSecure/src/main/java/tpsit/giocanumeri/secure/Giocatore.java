@@ -27,6 +27,22 @@ public class Giocatore implements Runnable{
     }
 
     /**
+     * Getter che restituisce il come del giocatore
+     * @return javalang.String
+     */
+    public String getNome(){
+        return nome;
+    }
+
+    /**
+     * Getter che restituisce la parola cifrata
+     * @return java.lang.String
+     */
+    public String getParola(){
+        return parola;
+    }
+
+    /**
      * Logica del gioco
      */
     private void gioca(){
