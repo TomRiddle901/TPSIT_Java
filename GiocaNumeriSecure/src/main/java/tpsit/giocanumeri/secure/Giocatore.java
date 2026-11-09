@@ -45,8 +45,9 @@ public class Giocatore implements Runnable{
     /**
      * Logica del gioco
      */
-    private void gioca(int numero){
-        // Stampa i dettagli del Thread
+    private void gioca(){
+        int numero = 20;
+
         getDettagli();
 
         for (int i = 0; i < numero; i++){
