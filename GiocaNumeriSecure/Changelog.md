@@ -4,6 +4,18 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## [0.1.1] 09/11/2026
+### Aggiunto
+- Classe `Cifrario` per cifrare la parola inserita dall'utente
+- Classe `GestoreFile` per salvare i dati del `Gioatore`
+
+### Aggiornato
+- Il giocatore ha 2 getter per il nome e per la parola cifrata
+- Il costruttire di `Giocatore` richiede la parola come parametro
+
+### Documentazione
+- Materiale del docente di TPSIT
+
 ## [0.1.0] 07/11/2026
 ### Aggionto
 - Recuperato il codice del vecchio progetto `GiocaNumeri`
