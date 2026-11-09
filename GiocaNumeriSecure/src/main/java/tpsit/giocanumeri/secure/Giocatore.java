@@ -6,7 +6,7 @@ package tpsit.giocanumeri.secure;
  */
 public class Giocatore implements Runnable{
     private String nome;
-    private String parola;
+    private String parolaCifrata;
     private int punteggio;
 
     /**
@@ -15,7 +15,7 @@ public class Giocatore implements Runnable{
      */
     public Giocatore(String nome, String parola){
         this.nome = nome;
-        this.parola = parola;
+        this.parolaCifrata = Cifrario.cifra(parola);
     }
 
     /**
@@ -35,11 +35,11 @@ public class Giocatore implements Runnable{
     }
 
     /**
-     * Getter che restituisce la parola cifrata
+     * Getter che restituisce la parolaCifrata cifrata
      * @return java.lang.String
      */
-    public String getParola(){
-        return parola;
+    public String getParolaCifrata(){
+        return parolaCifrata;
     }
 
     /**
@@ -47,7 +47,7 @@ public class Giocatore implements Runnable{
      */
     private void gioca(){
         int numero = 19;
-        parola = "Runnable!";
+        parolaCifrata = "Runnable!";
 
         getDettagli();
 
@@ -65,10 +65,10 @@ public class Giocatore implements Runnable{
     }
 
     /**
-     * Visualizza nome, punteggio e parola del giocatore
+     * Visualizza nome, punteggio e parolaCifrata del giocatore
      */
     private void comunica(){
-        System.out.println(nome + ": " + punteggio + "pt ha scelto la parola: " + parola);
+        System.out.println(nome + ": " + punteggio + "pt ha scelto la parolaCifrata: " + parolaCifrata);
     }
 
     /**
