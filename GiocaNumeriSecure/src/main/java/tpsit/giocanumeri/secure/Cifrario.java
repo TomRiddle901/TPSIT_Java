@@ -10,7 +10,7 @@ public class Cifrario {
      * @param parolaDaCifrare Parola/frase da cifrare
      * @return java.lang.String
      */
-    public String cifra(String parolaDaCifrare){
+    public static String cifra(String parolaDaCifrare){
         return "";
     }
 
@@ -19,7 +19,7 @@ public class Cifrario {
      * @param parolaCifrata Parola/frase da decifrare
      * @return java.lang.String
      */
-    public String decifra(String parolaCifrata){
+    public static String decifra(String parolaCifrata){
         return "";
     }
 }
