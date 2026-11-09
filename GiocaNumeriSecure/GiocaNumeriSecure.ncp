@@ -77,21 +77,27 @@
         <Collapsed>False</Collapsed>
         <Member type="Method">public void run()</Member>
       </Entity>
+      <Entity type="Class">
+        <Name>GestoreCrittografia</Name>
+        <Access>Public</Access>
+        <Location left="812" top="536" />
+        <Size width="163" height="77" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GestoreFile</Name>
+        <Access>Public</Access>
+        <Location left="833" top="717" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Dependency" first="0" second="1">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
-        <BendPoint relativeToStartShape="True">
-          <X>307</X>
-          <Y>753</Y>
-        </BendPoint>
-        <BendPoint relativeToStartShape="False">
-          <X>429</X>
-          <Y>744</Y>
-        </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="1" second="2">
         <StartOrientation>Vertical</StartOrientation>
@@ -132,6 +138,22 @@
           <X>85</X>
           <Y>563</Y>
         </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="1" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
       </Relationship>
     </Relationships>
   </ProjectItem>
