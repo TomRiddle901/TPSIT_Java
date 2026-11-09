@@ -12,6 +12,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Aggiornato
 - Il giocatore ha 2 getter per il nome e per la parola cifrata
 - Il costruttire di `Giocatore` richiede la parola come parametro
+- Rinominato attributo `parola` in `parolaCifrata` perché viene cifrata prima di essere salvata
 
 ### Documentazione
 - Materiale del docente di TPSIT
