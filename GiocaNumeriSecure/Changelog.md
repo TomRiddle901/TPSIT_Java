@@ -12,10 +12,16 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ### Aggiornato
 - Inseriti parametri `keyword` nel costruttore e nei metodi `cifra()` e `decifra()`
-- Aggiornati commenti `JavaDoc` 
+- Aggiornati commenti `JavaDoc`
+- La classe `Giocatore` estende la classe `Tread` come da UML
+
+### Rimosso
+- Implementazione della classe `Runnable`
 
 ### Documentazione
 - Materiale del docente di TPSIT
+- [Informazioni cifrario di Vigenère](https://brilliant.org/wiki/vigenere-cipher/)
+- [Codice Python del cifrario](https://inventwithpython.com/cracking/chapter19.html)
 
 ## [0.1.1] 09/11/2026
 ### Aggiunto
