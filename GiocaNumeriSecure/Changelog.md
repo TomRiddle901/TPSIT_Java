@@ -15,6 +15,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Inseriti parametri `keyword` nel costruttore e nei metodi `cifra()` e `decifra()`
 - Aggiornati commenti `JavaDoc`
 - La classe `Giocatore` estende la classe `Tread` come da UML
+- Diagramma UML con i metodi giust per le classi `Cifrario` e `Giocatore`
 
 ### Rimosso
 - Implementazione della classe `Runnable`
