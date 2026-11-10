@@ -8,6 +8,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Aggiunto
 - Utilizzo del cifrario di Vigenère
 - Cifratura di una parola utilizzando una keyword personalizzata
+- Decifratura di una parola utilizzando la keyword scelta dall'utente per cifrare la parola stessa
 
 ### Aggiornato
 - Inseriti parametri `keyword` nel costruttore e nei metodi `cifra()` e `decifra()`
