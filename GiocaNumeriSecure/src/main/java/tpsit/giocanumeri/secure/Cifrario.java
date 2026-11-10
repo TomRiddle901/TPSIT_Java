@@ -1,5 +1,8 @@
 package tpsit.giocanumeri.secure;
 
+/**
+ * Questa classe usa come tecnica di crittografia il cifrario di Vigenère
+ */
 public class Cifrario {
     public Cifrario(){
 

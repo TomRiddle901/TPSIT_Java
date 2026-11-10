@@ -1,12 +1,17 @@
 package tpsit.giocanumeri.secure;
 
+/**
+ * Classe di avvio principale
+ * @author TomRIddle901
+ * @version 0.1.2
+ */
 public class GiocaNumeri {
     static void main() {
         // Tempo di avvio del Thread main
         long tempoInizio = System.currentTimeMillis();
         // Creazione degli oggetti Giocatore
-        Giocatore g1 = new Giocatore("Giocatore 1", "");
-        Giocatore g2 = new Giocatore("Giocatore 2", "");
+        Giocatore g1 = new Giocatore("Giocatore 1", "", "");
+        Giocatore g2 = new Giocatore("Giocatore 2", "", "");
 
         // Creazione degli oggetti Thread
         Thread g1Thread = new Thread(g1);
