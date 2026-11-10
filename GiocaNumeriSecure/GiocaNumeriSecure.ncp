@@ -17,20 +17,19 @@
       <Entity type="Class">
         <Name>Giocatore</Name>
         <Access>Public</Access>
-        <Location left="496" top="606" />
-        <Size width="253" height="315" />
+        <Location left="497" top="607" />
+        <Size width="342" height="298" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String nome</Member>
         <Member type="Field">private String parolaCifrata</Member>
         <Member type="Field">private int punteggio</Member>
         <Member type="Field">private File file</Member>
         <Member type="Field">private int idGiocatore</Member>
-        <Member type="Constructor">public Giocatore(String nome, String parola)</Member>
+        <Member type="Constructor">public Giocatore(String nome, String parola, String keyword)</Member>
         <Member type="Method">public void setPunteggio(int punti)</Member>
-        <Member type="Method">public void setParola(String parolaDaCifrare)</Member>
+        <Member type="Method">public String getNome()</Member>
+        <Member type="Method">public String getParolaCifrata()</Member>
         <Member type="Method">private void gioca()</Member>
-        <Member type="Method">private void salvaSuFile()</Member>
-        <Member type="Method">private void apriFile()</Member>
         <Member type="Method">private void comunica()</Member>
         <Member type="Method">private void getDettagli()</Member>
         <Member type="Method">public void run()</Member>
@@ -81,15 +80,18 @@
       <Entity type="Class">
         <Name>Cifrario</Name>
         <Access>Public</Access>
-        <Location left="812" top="536" />
-        <Size width="163" height="77" />
+        <Location left="1023" top="534" />
+        <Size width="329" height="128" />
         <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Cifrario()</Member>
+        <Member type="Method">public static String cifra(String parolaDaCifrare, String keyword)</Member>
+        <Member type="Method">public static String decifra(String parolaCifrata, String keyword)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GestoreFile</Name>
         <Access>Public</Access>
-        <Location left="833" top="717" />
+        <Location left="1023" top="710" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -97,6 +99,8 @@
     </Entities>
     <Relationships>
       <Relationship type="Dependency" first="0" second="1">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
       </Relationship>
@@ -104,8 +108,8 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>518</X>
-          <Y>581</Y>
+          <X>519</X>
+          <Y>582</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>487</X>
@@ -132,8 +136,8 @@
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>451</X>
-          <Y>630</Y>
+          <X>452</X>
+          <Y>631</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>85</X>
@@ -141,16 +145,12 @@
         </BendPoint>
       </Relationship>
       <Relationship type="Association" first="1" second="6">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="1" second="5">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
