@@ -8,6 +8,7 @@ public class Giocatore extends Thread{
     private String nome;
     private String parolaCifrata;
     private int punteggio;
+    long idGiocatore = this.threadId();
 
     /**
      * Costruttore classe Giocatore
