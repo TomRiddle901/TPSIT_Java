@@ -5,6 +5,10 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ---
 
 ## [0.1.2] 10/11/2026
+### Aggiunto
+- Utilizzo del cifrario di Vigenère
+- Cifratura di una parola utilizzando una keyword personalizzata
+
 ### Aggiornato
 - Inseriti parametri `keyword` nel costruttore e nei metodi `cifra()` e `decifra()`
 - Aggiornati commenti `JavaDoc` 
