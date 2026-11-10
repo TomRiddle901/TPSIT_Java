@@ -15,7 +15,24 @@ public class Cifrario {
      * @return java.lang.String
      */
     public static String cifra(String parolaDaCifrare, String keyword){
-        return "";
+        // Trasforma la String in un array di char (tutti maiuscoli)
+        char[] parolaInCharArray = parolaDaCifrare.toUpperCase().toCharArray();
+        keyword = keyword.toUpperCase();
+        int keyIndex = 0;
+
+        for (int i = 0; i < parolaInCharArray.length; i++){
+            char carattere = parolaInCharArray[i];
+
+            if (carattere >= 'A' && carattere <= 'Z'){ // Vengono gestite solo le lettere maiuscole
+                int spostamento = keyword.charAt(keyIndex % keyword.length());
+
+                // Cifratura
+                parolaInCharArray[i] = (char) ((carattere - 'A' + spostamento) % 26 + 'A');
+                keyIndex++;
+            }
+        }
+
+        return new String(parolaInCharArray); // Restituisce una string dei char (parola cifrata)
     }
 
     /**
