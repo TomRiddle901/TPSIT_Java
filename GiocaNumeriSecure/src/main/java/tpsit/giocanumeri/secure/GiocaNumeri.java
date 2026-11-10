@@ -1,7 +1,7 @@
 package tpsit.giocanumeri.secure;
 
 /**
- * Classe di avvio principale
+ * Classe di avvio principale di tutto il progetto
  * @author TomRIddle901
  * @version 0.1.2
  */

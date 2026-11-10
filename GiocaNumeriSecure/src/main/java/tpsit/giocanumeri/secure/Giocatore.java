@@ -1,8 +1,9 @@
 package tpsit.giocanumeri.secure;
 
 /**
- * Classe del giocatore
- * @implNote java.lang.Runnable Implementazione della classe Runnable
+ * Thread Giocatore
+ * @author TomRiddle901
+ * @version 0.1.9
  */
 public class Giocatore extends Thread{
     private String nome;
