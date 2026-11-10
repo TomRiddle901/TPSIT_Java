@@ -42,6 +42,23 @@ public class Cifrario {
      * @return java.lang.String
      */
     public static String decifra(String parolaCifrata, String keyword){
-        return "";
+        // Trasforma la String in un array di char tutti maiuscoli
+        char[] parolaInCharArray = parolaCifrata.toUpperCase().toCharArray();
+        keyword = keyword.toUpperCase();
+        int keyIndex = 0;
+
+        for (int i = 0; i < parolaInCharArray.length; i++){
+            char carattere = parolaInCharArray[i];
+
+            if (carattere >= 'A' && carattere <= 'Z'){ // Gestione solo dei caratteri maiuscoli
+                int spostamento = keyword.charAt(keyIndex % keyword.length() - 'A');
+
+                // Decifratura
+                parolaInCharArray[i] = (char) ((carattere - 'A' + spostamento) % 26 + 'A');
+                keyIndex++;
+            }
+        }
+
+        return new String(parolaInCharArray); // Restituisce la parola decifrata
     }
 }
