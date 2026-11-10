@@ -4,7 +4,7 @@ package tpsit.giocanumeri.secure;
  * Classe del giocatore
  * @implNote java.lang.Runnable Implementazione della classe Runnable
  */
-public class Giocatore implements Runnable{
+public class Giocatore extends Thread{
     private String nome;
     private String parolaCifrata;
     private int punteggio;
