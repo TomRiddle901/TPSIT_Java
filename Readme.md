@@ -29,6 +29,19 @@ Il progetto include:
 
 ---
 
+### Requisiti
+- **JDK 25 o successivo**: i metodi di avvio sono dichiarati come `static void main()` senza parametri e modificatore di accesso, forma supportata dalle nuove regole di avvio introdotte in Java 25, per più informazioni visitare la [documentazione ufficiale Oracle](https://docs.oracle.com/en/java/javase/25/language/compact-source-files-instance-main-methods.html)
+- Un terminale oppure un ide Java, ad esempio IntellijIDEA (consigliato), Eclipse o Apache NetBeans IDE
+
+Per controllare la versione di java installata:
+
+```bash
+java --version
+javac ..version
+```
+
+---
+
 ### Licenza
 
 Questo repository non utilizza alcuna licenza open-source formale.
