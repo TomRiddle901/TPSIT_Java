@@ -12,10 +12,12 @@ public class Giocatore implements Runnable{
     /**
      * Costruttore classe Giocatore
      * @param nome Nome del giocatore
+     * @param parola Parola/frase da cifrare
+     * @param keyword Parola chiave
      */
-    public Giocatore(String nome, String parola){
+    public Giocatore(String nome, String parola, String keyword){
         this.nome = nome;
-        this.parolaCifrata = Cifrario.cifra(parola);
+        this.parolaCifrata = Cifrario.cifra(parola, keyword);
     }
 
     /**
