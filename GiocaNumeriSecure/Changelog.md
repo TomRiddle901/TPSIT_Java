@@ -4,6 +4,14 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## [0.1.2] 10/11/2026
+### Aggiornato
+- Inseriti parametri `keyword` nel costruttore e nei metodi `cifra()` e `decifra()`
+- Aggiornati commenti `JavaDoc` 
+
+### Documentazione
+- Materiale del docente di TPSIT
+
 ## [0.1.1] 09/11/2026
 ### Aggiunto
 - Classe `Cifrario` per cifrare la parola inserita dall'utente
