@@ -37,9 +37,6 @@ public class GiocaNumeri {
             System.err.println("Errore di comunicazione della tastiera con la RAM");
         }
 
-        if (g1.equals(null)){
-        }
-
         // Creazione degli oggetti Thread
         Thread g1Thread = new Thread(g1);
         Thread g2Thread = new Thread(g2);
