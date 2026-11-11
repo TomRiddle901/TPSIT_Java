@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Classe di avvio principale di tutto il progetto
  * @author TomRiddle901
- * @version 0.1.5
+ * @version 0.1.6
  */
 public class GiocaNumeri {
     // Array dei thread presenti nel gioco
@@ -20,8 +20,12 @@ public class GiocaNumeri {
             lanciaGioco();
         }catch (Exception exception){
             System.err.println(exception.getMessage());
-            System.err.println("Il programma verrà interrotto");
+            for (int i = 0; i < threads.size(); i++){
+                threads.get(i).start();
+            }
         }
+
+        getInfoThread(Thread.currentThread());
 
         /*
         // Inizializzazione delle variabili
@@ -115,7 +119,7 @@ public class GiocaNumeri {
                 scelta = tastiera.readLine().toLowerCase();
 
                 if (scelta.isEmpty() || (!scelta.equals("y") && !scelta.equals("n"))){
-                    throw new Exception("La scelta non è valida, il programma verrà interrotto.");
+                    throw new Exception("La scelta inserita non è valida, il seguente giocatore non verrà creato e verrà avviato il gioco.");
                 }else{
                     threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore)));
                     idGiocatore++;
