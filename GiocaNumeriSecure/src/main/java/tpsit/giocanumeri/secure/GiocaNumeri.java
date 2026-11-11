@@ -9,7 +9,10 @@ import java.util.ArrayList;
  * @version 0.1.6
  */
 public class GiocaNumeri {
-    // Array dei thread presenti nel gioco
+    /**
+     * Array di thread Giocatore creati dall'utente
+     * @see lanciaGioco() lanciaGioco()
+     */
     static ArrayList<Thread> threads = new ArrayList<Thread>();
 
     static void main() {
@@ -103,6 +106,12 @@ public class GiocaNumeri {
         System.out.println("------------------------------");
     }
 
+    /**
+     * Crea i thread Giocatore con nome, parola, keyword inseriti dall'utente
+     * e gestisce gli ID del giocatore tramite un contatore e il numero
+     * dei thread creati in precedenza
+     * @throws Exception Scelta non valida: l'utente non digita correttamente y o n
+     */
     private static void lanciaGioco() throws Exception{
         String nome, parola, keyword, scelta;
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
