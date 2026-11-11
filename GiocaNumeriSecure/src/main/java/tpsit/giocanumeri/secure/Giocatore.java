@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Thread Giocatore
  * @author TomRiddle901
- * @version 0.1.9
+ * @version 0.2.0
  */
 public class Giocatore extends Thread{
     private String nome;
@@ -82,13 +82,13 @@ public class Giocatore extends Thread{
      * Visualizza nome, punteggio e parolaCifrata del giocatore
      */
     private void comunica(){
-        String keyword, parolaDecifrata = "";
+        String keyword, parolaDecifrata;
         try{
             System.out.println("Per visualizzare la parola decifrata, digita la keyword altrimenti alscia vuoto");
             System.out.print("Keyword: ");
             keyword = tastiera.readLine();
 
-            if (keyword.equals("")){
+            if (keyword.isEmpty()){
                 System.out.println(nome + ": " + punteggio + "pt la tua parola cifrata è: " + parolaCifrata);
             }else{
                 parolaDecifrata = Cifrario.decifra(parolaCifrata, keyword);
