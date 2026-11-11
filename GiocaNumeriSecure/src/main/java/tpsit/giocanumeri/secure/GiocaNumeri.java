@@ -1,13 +1,17 @@
 package tpsit.giocanumeri.secure;
 
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * Classe di avvio principale di tutto il progetto
  * @author TomRiddle901
- * @version 0.1.4
+ * @version 0.1.5
  */
 public class GiocaNumeri {
+    // Array dei thread presenti nel gioco
+    static ArrayList<Thread> threads = new ArrayList<Thread>();
+
     static void main() {
         // Tempo di avvio del Thread main
         long tempoInizio = System.currentTimeMillis();
@@ -90,6 +94,7 @@ public class GiocaNumeri {
     private static void lanciaGioco() throws Exception{
         String nome, parola, keyword, scelta;
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
+        int idGiocatore = threads.size();
 
         try{
             do{
@@ -105,10 +110,15 @@ public class GiocaNumeri {
                 if (scelta.isEmpty() || (!scelta.equals("y") && !scelta.equals("n"))){
                     throw new Exception("La scelta non è valida, il programma verrà interrotto.");
                 }else{
-                    Thread thread = new Thread(new Giocatore(nome, parola, keyword));
-                    thread.start();
+                    threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore)));
+                    idGiocatore++;
                 }
             }while (!scelta.equals("n"));
+
+            for (int i = 0; i < threads.size(); i++){
+                threads.get(i).start();
+            }
+
         }catch (IOException ioException){
             System.err.println("Errore di comunicazione della stastiera con la RAM");
         }catch (NullPointerException nullPointerEx){
@@ -117,6 +127,5 @@ public class GiocaNumeri {
             System.err.println(exception.getMessage());
             System.exit(1); // Esce dal programma
         }
-
     }
 }
