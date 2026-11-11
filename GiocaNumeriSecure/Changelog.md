@@ -4,6 +4,22 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## {0.1.4} 11/11/2026
+### Aggiunto
+- Array list di thread dinamico in base a quanti giocatori l'utente vuole inserire
+- Funzione `lanciaGioco()` per permettere di creare all'utente n giocatori
+
+### Fixed
+- Gestione dell'ID del giocatore con la lunghezza dell'array e un contatore
+
+### Problems
+- `Cifrario`: i metodi `cifra()` e `decifra()` non funzionano correttamente 
+
+### Todo
+- Gestione della richiesta della chiave per decifrare la parola segreta quando il thread finisce l'esecuzione
+- Scelta personalizzata del'utente del numero che deve raggiungere il giocatore (input tramite classe Giocatore)
+- Correggere il cifrario (non funziona)
+
 ## {0.1.3} 11/11/2026
 ### Aggiunto
 - Gettter per l'ID del giocatore
