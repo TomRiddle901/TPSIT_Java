@@ -1,17 +1,44 @@
 package tpsit.giocanumeri.secure;
 
+import java.io.*;
+
 /**
  * Classe di avvio principale di tutto il progetto
- * @author TomRIddle901
- * @version 0.1.2
+ * @author TomRiddle901
+ * @version 0.1.3
  */
 public class GiocaNumeri {
     static void main() {
         // Tempo di avvio del Thread main
         long tempoInizio = System.currentTimeMillis();
-        // Creazione degli oggetti Giocatore
-        Giocatore g1 = new Giocatore("Giocatore 1", "", "");
-        Giocatore g2 = new Giocatore("Giocatore 2", "", "");
+
+        // Inizializzazione delle variabili
+        String parola = "", keyword = "";
+        BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
+        Giocatore g1 = null;
+        Giocatore g2 = null;
+
+        // Richiesta della parola e della keyword (questo è temporaneo, verrà sostituito con un cliclo)
+        try{
+            // Giocatore1
+            System.out.print("Giocatore1, inserisci la tua parola segreta: ");
+            parola = tastiera.readLine();
+            System.out.print("Giocatore1, inserisci la tua keyword: ");
+            keyword = tastiera.readLine();
+            g1 = new Giocatore("Giocatore 1", parola, keyword);
+
+            // Giocatore2
+            System.out.print("Giocatore2, inserisci la tua parola segreta: ");
+            parola = tastiera.readLine();
+            System.out.print("Giocatore2, inserisci la tua keyword: ");
+            keyword = tastiera.readLine();
+            g2 = new Giocatore("Giocatore 2", parola, keyword);
+        }catch (IOException ioException){
+            System.err.println("Errore di comunicazione della tastiera con la RAM");
+        }
+
+        if (g1.equals(null)){
+        }
 
         // Creazione degli oggetti Thread
         Thread g1Thread = new Thread(g1);
