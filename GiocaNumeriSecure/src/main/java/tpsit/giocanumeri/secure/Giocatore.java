@@ -103,7 +103,8 @@ public class Giocatore extends Thread{
      * Stampa dei dettagli del Thread corrente
      */
     private void getDettagli(){
-        System.out.println("ID: " + idGiocatore);
+        System.out.println("ID Giocatore: " + idGiocatore);
+        System.out.println("ID Thread: " + Thread.currentThread().threadId());
         System.out.println("Nome: " + Thread.currentThread().getName());
         System.out.println("Priorità: " + Thread.currentThread().getPriority());
         System.out.println("Stato: " + Thread.currentThread().getState());
