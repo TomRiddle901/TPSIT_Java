@@ -70,7 +70,7 @@ public class Giocatore extends Thread{
             System.out.println(nome + ": " + i);
 
             try {
-                Thread.sleep(2000);
+                Thread.sleep(500);
             }catch (InterruptedException interruptedEx){
                 System.err.println("Errore nella transizione del Thread da running a sleeping");
             }
