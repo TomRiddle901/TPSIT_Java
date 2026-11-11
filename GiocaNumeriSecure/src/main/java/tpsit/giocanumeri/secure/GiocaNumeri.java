@@ -12,6 +12,7 @@ public class GiocaNumeri {
         // Tempo di avvio del Thread main
         long tempoInizio = System.currentTimeMillis();
 
+        /*
         // Inizializzazione delle variabili
         String parola, keyword;
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
@@ -41,6 +42,7 @@ public class GiocaNumeri {
         Thread g1Thread = new Thread(g1);
         Thread g2Thread = new Thread(g2);
 
+
         // Ottieni le informazioni sul Thread corrente (main)
         getInfoThread(Thread.currentThread());
 
@@ -67,8 +69,9 @@ public class GiocaNumeri {
         getInfoThread(g2Thread);
         getInfoThread(Thread.currentThread());
 
-        long tempoFine = System.currentTimeMillis() - tempoInizio;
+         */
 
+        long tempoFine = System.currentTimeMillis() - tempoInizio;
         System.out.println("Tempo trascorso per l'esecuzione del programma (s): " + (tempoFine/1000.0));
     }
 
@@ -82,5 +85,38 @@ public class GiocaNumeri {
         System.out.println("Priorità: " + thread.getPriority());
         System.out.println("Stato: " + thread.getState());
         System.out.println("------------------------------");
+    }
+
+    private static void lanciaGioco() throws Exception{
+        String nome, parola, keyword, scelta;
+        BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
+
+        try{
+            do{
+                System.out.print("Nome del giocatore: ");
+                nome = tastiera.readLine();
+                System.out.print("Parola segreta: ");
+                parola = tastiera.readLine();
+                System.out.print("Chiave per decifrare: ");
+                keyword = tastiera.readLine();
+                System.out.print("Vuoi creare un altro giocatore? [y/n]: ");
+                scelta = tastiera.readLine().toLowerCase();
+
+                if (scelta.isEmpty() || (!scelta.equals("y") && !scelta.equals("n"))){
+                    throw new Exception("La scelta non è valida, il programma verrà interrotto.");
+                }else{
+                    Thread thread = new Thread(new Giocatore(nome, parola, keyword));
+                    thread.start();
+                }
+            }while (!scelta.equals("n"));
+        }catch (IOException ioException){
+            System.err.println("Errore di comunicazione della stastiera con la RAM");
+        }catch (NullPointerException nullPointerEx){
+            System.err.println("Input non rilevato");
+        }catch (Exception exception){
+            System.err.println(exception.getMessage());
+            System.exit(1); // Esce dal programma
+        }
+
     }
 }
