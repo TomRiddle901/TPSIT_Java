@@ -1,5 +1,7 @@
 package tpsit.giocanumeri.secure;
 
+import java.io.*;
+
 /**
  * Thread Giocatore
  * @author TomRiddle901
@@ -10,6 +12,7 @@ public class Giocatore extends Thread{
     private String parolaCifrata;
     private int punteggio;
     long idGiocatore = this.threadId();
+    BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
 
     /**
      * Costruttore classe Giocatore
@@ -79,7 +82,21 @@ public class Giocatore extends Thread{
      * Visualizza nome, punteggio e parolaCifrata del giocatore
      */
     private void comunica(){
-        System.out.println(nome + ": " + punteggio + "pt ha scelto la parolaCifrata: " + parolaCifrata);
+        String keyword, parolaDecifrata = "";
+        try{
+            System.out.println("Per visualizzare la parola decifrata, digita la keyword altrimenti alscia vuoto");
+            System.out.print("Keyword: ");
+            keyword = tastiera.readLine();
+
+            if (keyword.equals("")){
+                System.out.println(nome + ": " + punteggio + "pt la tua parola cifrata è: " + parolaCifrata);
+            }else{
+                parolaDecifrata = Cifrario.decifra(parolaCifrata, keyword);
+                System.out.println(nome + ": " + punteggio + "pt, la tua parola decifrata è: " + parolaDecifrata);
+            }
+        }catch (IOException ioException){
+            System.err.println("Errore di comunicazione della tastiera con la RAM");
+        }
     }
 
     /**
