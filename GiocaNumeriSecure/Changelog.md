@@ -10,6 +10,9 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Richiesta della `keyword` per visualizzare la parola decifrata del giocatore
 - Richiesta della parola segreta e keyword per creare i giocatori `g1` e `g2`
 
+### Fixed
+- Metodo `decifra()`: spostata operazione `- 'A'` fuori `charAt()` altrimenti ritornava sempre `StringIndexOutOfBoundsException` oppure veniva eseguito un calcolo errato dello spostamento per decifrare la parola
+
 ## {0.1.2} 10/11/2026
 ### Aggiunto
 - Utilizzo del cifrario di Vigenère
