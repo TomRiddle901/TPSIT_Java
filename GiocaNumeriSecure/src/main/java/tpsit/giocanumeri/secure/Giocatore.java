@@ -103,7 +103,7 @@ public class Giocatore extends Thread{
      * Stampa dei dettagli del Thread corrente
      */
     private void getDettagli(){
-        System.out.println("ID: " + Thread.currentThread().threadId());
+        System.out.println("ID: " + idGiocatore);
         System.out.println("Nome: " + Thread.currentThread().getName());
         System.out.println("Priorità: " + Thread.currentThread().getPriority());
         System.out.println("Stato: " + Thread.currentThread().getState());
@@ -111,7 +111,8 @@ public class Giocatore extends Thread{
     }
 
     /**
-     * Metodo Run presente nella classe Runnable
+     * Metodo Run presente nella classe Thread
+     * Qeusto metodo avvia il gioco appena viene creato il thread Giocatore
      */
     @Override
     public void run(){
