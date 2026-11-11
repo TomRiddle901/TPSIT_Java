@@ -16,6 +16,13 @@ public class GiocaNumeri {
         // Tempo di avvio del Thread main
         long tempoInizio = System.currentTimeMillis();
 
+        try{
+            lanciaGioco();
+        }catch (Exception exception){
+            System.err.println(exception.getMessage());
+            System.err.println("Il programma verrà interrotto");
+        }
+
         /*
         // Inizializzazione delle variabili
         String parola, keyword;
@@ -121,11 +128,8 @@ public class GiocaNumeri {
 
         }catch (IOException ioException){
             System.err.println("Errore di comunicazione della stastiera con la RAM");
-        }catch (NullPointerException nullPointerEx){
+        }catch (NullPointerException nullPointerEx) {
             System.err.println("Input non rilevato");
-        }catch (Exception exception){
-            System.err.println(exception.getMessage());
-            System.exit(1); // Esce dal programma
         }
     }
 }
