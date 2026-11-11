@@ -53,7 +53,7 @@ public class Cifrario {
             char carattere = parolaInCharArray[i];
 
             if (carattere >= 'A' && carattere <= 'Z'){ // Gestione solo dei caratteri maiuscoli
-                int spostamento = keyword.charAt(keyIndex % keyword.length() - 'A');
+                int spostamento = keyword.charAt(keyIndex % keyword.length()) - 'A';
 
                 // Decifratura
                 parolaInCharArray[i] = (char) ((carattere - 'A' + spostamento) % 26 + 'A');
