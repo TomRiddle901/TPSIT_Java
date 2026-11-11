@@ -13,7 +13,7 @@ public class GiocaNumeri {
         long tempoInizio = System.currentTimeMillis();
 
         // Inizializzazione delle variabili
-        String parola = "", keyword = "";
+        String parola, keyword;
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         Giocatore g1 = null;
         Giocatore g2 = null;
