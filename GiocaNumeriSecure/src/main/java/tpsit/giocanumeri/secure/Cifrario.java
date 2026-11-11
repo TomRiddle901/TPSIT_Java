@@ -3,7 +3,7 @@ package tpsit.giocanumeri.secure;
 /**
  * Questa classe usa come tecnica di crittografia il cifrario di Vigenère
  * @author TomRiddle901
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class Cifrario {
     public Cifrario(){

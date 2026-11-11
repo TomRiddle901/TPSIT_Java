@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Classe di avvio principale di tutto il progetto
  * @author TomRiddle901
- * @version 0.1.3
+ * @version 0.1.4
  */
 public class GiocaNumeri {
     static void main() {
