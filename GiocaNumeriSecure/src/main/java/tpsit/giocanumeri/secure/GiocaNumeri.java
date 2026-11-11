@@ -25,6 +25,7 @@ public class GiocaNumeri {
             }
         }
 
+        System.out.println("Info del thread principale:");
         getInfoThread(Thread.currentThread());
 
         /*
