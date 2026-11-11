@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Thread Giocatore
  * @author TomRiddle901
- * @version 0.2.0
+ * @version 0.2.1
  */
 public class Giocatore extends Thread{
     private String nome;
