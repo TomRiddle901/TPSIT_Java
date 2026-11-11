@@ -4,6 +4,8 @@ import java.io.*;
 
 /**
  * Thread Giocatore
+ * @see Giocatore(String nome, String parola, String keyword, int idGiocatore) Giocatore()
+ * per visualizzare i parametri richiesti per creare l'oggetto
  * @author TomRiddle901
  * @version 0.2.2
  */
@@ -15,10 +17,11 @@ public class Giocatore extends Thread{
     BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
 
     /**
-     * Costruttore classe Giocatore
+     * Costruttore della classe Giocatore
      * @param nome Nome del giocatore
-     * @param parola Parola/frase da cifrare
-     * @param keyword Parola chiave
+     * @param parola Parola/frase che verrà cifrata
+     * @param keyword Parola chiave per cifrare la parola
+     * @see Cifrario Cifrario.java per vedere il metodo di crittografia utilizzato
      */
     public Giocatore(String nome, String parola, String keyword, int idGiocatore){
         this.nome = nome;
