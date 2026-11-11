@@ -12,6 +12,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ### Aggiornato
 - Il giocatore per stampare le informazioni del Thread, l'ID viene preso da `idGiocatore` (id assegnato da quando parte il thread), al posto che recuperarlo alla fine con `Thread.currentThread().threadId()`
+- Metodo `getDettagli()`: inserita stampa dell'ID del giocatore (ancora non gestito)
 
 ### Fixed
 - Metodo `decifra()`: spostata operazione `- 'A'` fuori `charAt()` altrimenti ritornava sempre `StringIndexOutOfBoundsException` oppure veniva eseguito un calcolo errato dello spostamento per decifrare la parola
