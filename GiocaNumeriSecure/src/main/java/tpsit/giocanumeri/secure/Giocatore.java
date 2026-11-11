@@ -32,7 +32,7 @@ public class Giocatore extends Thread{
 
     /**
      * Getter che restituisce il come del giocatore
-     * @return javalang.String
+     * @return java.lang.String
      */
     public String getNome(){
         return nome;
@@ -44,6 +44,14 @@ public class Giocatore extends Thread{
      */
     public String getParolaCifrata(){
         return parolaCifrata;
+    }
+
+    /**
+     * Getter per ottenere l'ID del giocatore
+     * @return long
+     */
+    public long getIdGiocatore(){
+        return idGiocatore;
     }
 
     /**
