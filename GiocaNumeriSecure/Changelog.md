@@ -10,6 +10,9 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Richiesta della `keyword` per visualizzare la parola decifrata del giocatore
 - Richiesta della parola segreta e keyword per creare i giocatori `g1` e `g2`
 
+### Aggiornato
+- Il giocatore per stampare le informazioni del Thread, l'ID viene preso da `idGiocatore` (id assegnato da quando parte il thread), al posto che recuperarlo alla fine con `Thread.currentThread().threadId()`
+
 ### Fixed
 - Metodo `decifra()`: spostata operazione `- 'A'` fuori `charAt()` altrimenti ritornava sempre `StringIndexOutOfBoundsException` oppure veniva eseguito un calcolo errato dello spostamento per decifrare la parola
 
