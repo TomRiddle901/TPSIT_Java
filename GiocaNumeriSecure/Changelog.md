@@ -4,7 +4,13 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
-## [0.1.2] 10/11/2026
+## {0.1.3} 11/11/2026
+### Aggiunto
+- Gettter per l'ID del giocatore
+- Richiesta della `keyword` per visualizzare la parola decifrata del giocatore
+- Richiesta della parola segreta e keyword per creare i giocatori `g1` e `g2`
+
+## {0.1.2} 10/11/2026
 ### Aggiunto
 - Utilizzo del cifrario di Vigenère
 - Cifratura di una parola utilizzando una keyword personalizzata
@@ -25,7 +31,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - [Informazioni cifrario di Vigenère](https://brilliant.org/wiki/vigenere-cipher/)
 - [Codice Python del cifrario](https://inventwithpython.com/cracking/chapter19.html)
 
-## [0.1.1] 09/11/2026
+## {0.1.1} 09/11/2026
 ### Aggiunto
 - Classe `Cifrario` per cifrare la parola inserita dall'utente
 - Classe `GestoreFile` per salvare i dati del `Gioatore`
@@ -38,7 +44,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Documentazione
 - Materiale del docente di TPSIT
 
-## [0.1.0] 07/11/2026
+## {0.1.0} 07/11/2026
 ### Aggionto
 - Recuperato il codice del vecchio progetto `GiocaNumeri`
 - Creato diagramma UML della nuova esercitazione
@@ -46,7 +52,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Documentazione
 - Materiale del docente di TPSIT
 
-## [0.0.4] 05/11/2026
+## {0.0.4} 05/11/2026
 
 ### Aggiunto
 - Aggiunti `printStackTrace()` mancanti
@@ -63,7 +69,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Presentazion PowerPoint della docente di TPSIT
 - Google :/
 
-## [0.0.3] 04/11/2026
+## {0.0.3} 04/11/2026
 ### Aggiunto
 - Srittura del file di testo `BufferedWriter` e `FileWriter`
 - Gestite le eccezioni nella scrittura del file
@@ -79,7 +85,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Documentazione
 - Presentazion PowerPoint della docente di TPSIT
 
-## [0.0.2] 28/10/2026
+## {0.0.2} 28/10/2026
 ### Aggiunto
 - Lettura di input di testo da tastiera utilizzando le classi `BufferedReader` e `InputStreamReader`
 - Lettura di un file di testo semplice _(prova.txt)_ utilizzando `InputStream` e `BufferedReader`
@@ -92,7 +98,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Documentazione ufficiale Java di Oracle
 
 
-## [0.0.1] 26/10/2026
+## {0.0.1} 26/10/2026
 
 ### Aggiunto
 - Prova per testing gestione delle eccezioni
