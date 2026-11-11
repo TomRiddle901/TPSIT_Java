@@ -5,13 +5,13 @@ import java.io.*;
 /**
  * Thread Giocatore
  * @author TomRiddle901
- * @version 0.2.1
+ * @version 0.2.2
  */
 public class Giocatore extends Thread{
     private String nome;
     private String parolaCifrata;
     private int punteggio;
-    long idGiocatore = this.threadId();
+    int idGiocatore;
     BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
 
     /**
@@ -20,9 +20,10 @@ public class Giocatore extends Thread{
      * @param parola Parola/frase da cifrare
      * @param keyword Parola chiave
      */
-    public Giocatore(String nome, String parola, String keyword){
+    public Giocatore(String nome, String parola, String keyword, int idGiocatore){
         this.nome = nome;
         this.parolaCifrata = Cifrario.cifra(parola, keyword);
+        this.idGiocatore = idGiocatore;
     }
 
     /**
