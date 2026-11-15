@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class GiocaNumeri {
     /**
      * Array di thread Giocatore creati dall'utente
-     * @see lanciaGioco() lanciaGioco()
+     * @see #lanciaGioco() lanciaGioco()
      */
     static ArrayList<Thread> threads = new ArrayList<>();
 
@@ -23,9 +23,6 @@ public class GiocaNumeri {
             lanciaGioco();
         }catch (Exception exception){
             System.err.println(exception.getMessage());
-            for (int i = 0; i < threads.size(); i++){
-                threads.get(i).start();
-            }
         }
 
         System.out.println("Info del thread principale:");
@@ -110,7 +107,7 @@ public class GiocaNumeri {
      * Crea i thread Giocatore con nome, parola, keyword inseriti dall'utente
      * e gestisce gli ID del giocatore tramite un contatore e il numero
      * dei thread creati in precedenza
-     * @throws Exception Scelta non valida: l'utente non digita correttamente y o n
+     * @throws Exception eh
      */
     private static void lanciaGioco() throws Exception{
         String nome, parola, keyword, scelta;

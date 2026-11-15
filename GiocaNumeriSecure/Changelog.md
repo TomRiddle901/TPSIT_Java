@@ -15,6 +15,9 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Aggornato
 - JavaDoc della classe `Cifrario`
 
+### Rimosso
+- Condizione che restituiva un Exception inutile sulla convalida dell'input della scelta
+
 ## {0.1.4} 11/11/2026
 ### Aggiunto
 - Array list di thread dinamico in base a quanti giocatori l'utente vuole inserire
