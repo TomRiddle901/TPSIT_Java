@@ -74,7 +74,7 @@ public class Cifrario {
      * @throws Exception "La keyword non può essere vuota" per il campo <code>keyword</code> vuoto o null
      * @throws Exception "Testo inserito non valido: puoi inserire solo caratteri (a-z o A-Z)" <code>keyword</code> o <code>testo</code> non rispettano la RegEx <code>[a-zA-Z]+</code>
      */
-    private static void convalidaParametri(String testo, String keyword) throws Exception{
+    public static void convalidaParametri(String testo, String keyword) throws Exception{
         if (testo == null || testo.isEmpty()){
             throw new Exception("Devi inserire una parola da cifrare");
         }
