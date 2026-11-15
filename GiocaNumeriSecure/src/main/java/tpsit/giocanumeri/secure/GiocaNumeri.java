@@ -128,12 +128,10 @@ public class GiocaNumeri {
                 System.out.print("Vuoi creare un altro giocatore? [y/n]: ");
                 scelta = tastiera.readLine().toLowerCase();
 
-                if (scelta.isEmpty() || (!scelta.equals("y") && !scelta.equals("n"))){
-                    throw new Exception("La scelta inserita non è valida, il seguente giocatore non verrà creato e verrà avviato il gioco.");
-                }else{
-                    threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore)));
-                    idGiocatore++;
-                }
+                Cifrario.convalidaParametri(parola, keyword);
+
+                threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore)));
+                idGiocatore++;
             }while (!scelta.equals("n"));
 
             for (int i = 0; i < threads.size(); i++){
