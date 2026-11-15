@@ -9,9 +9,7 @@ package tpsit.giocanumeri.secure;
  * @version 1.0.2
  */
 public class Cifrario {
-    public Cifrario(){
-
-    }
+    public Cifrario(){}
 
     /**
      * Cifra una parola passata come parametro e restituisce la parola cifrata
