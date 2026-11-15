@@ -18,6 +18,13 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Rimosso
 - `GiocaNumeri`: condizione che restituiva un Exception inutile sulla convalida dell'input della scelta
 - `GiocaNumeri`: ciclo dopo il catch del metodo `lanciaGioco()` perché se i parametri non sono validi non si crea l'oggetto
+- `GiocaNumeri`: rimosso il vecchio codice commentato
+
+### Documentazione
+- [Cifrario di Vigenére in Java](https://www.baeldung.com/java-vigenere-cipher)
+- [Cifrario di Vigenére in Java (StackOverflow)](https://stackoverflow.com/questions/28737300/confused-about-vigenère-cipher-implementation-in-java)
+- [Tabella dei caratteri ASCII](https://www.brescianet.com/appunti/vari/tabellaascii/ascii.htm)
+- [ArrayList explicit type argument](https://stackoverflow.com/questions/43018802/arraylist-explicit-type-argument-string-can-be-replaced-with)
 
 ## {0.1.4} 11/11/2026
 ### Aggiunto
