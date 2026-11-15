@@ -16,7 +16,8 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - JavaDoc della classe `Cifrario`
 
 ### Rimosso
-- Condizione che restituiva un Exception inutile sulla convalida dell'input della scelta
+- `GiocaNumeri`: condizione che restituiva un Exception inutile sulla convalida dell'input della scelta
+- `GiocaNumeri`: ciclo dopo il catch del metodo `lanciaGioco()` perché se i parametri non sono validi non si crea l'oggetto
 
 ## {0.1.4} 11/11/2026
 ### Aggiunto
