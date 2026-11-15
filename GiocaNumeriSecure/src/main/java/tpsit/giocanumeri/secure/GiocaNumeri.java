@@ -13,7 +13,7 @@ public class GiocaNumeri {
      * Array di thread Giocatore creati dall'utente
      * @see lanciaGioco() lanciaGioco()
      */
-    static ArrayList<Thread> threads = new ArrayList<Thread>();
+    static ArrayList<Thread> threads = new ArrayList<>();
 
     static void main() {
         // Tempo di avvio del Thread main

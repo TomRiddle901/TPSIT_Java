@@ -29,7 +29,7 @@ public class Cifrario {
             char carattere = parolaInCharArray[i];
 
             if (carattere >= 'A' && carattere <= 'Z'){ // Vengono gestite solo le lettere maiuscole
-                int spostamento = keyword.charAt(keyIndex % keyword.length());
+                int spostamento = keyword.charAt(keyIndex % keyword.length()) - 'A';
 
                 // Cifratura
                 parolaInCharArray[i] = (char) ((carattere - 'A' + spostamento) % 26 + 'A');
