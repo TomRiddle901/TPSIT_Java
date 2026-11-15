@@ -6,7 +6,7 @@ package tpsit.giocanumeri.secure;
  * @see cifra cifra() per vedere i parametri da passare per cifrare
  * @see decifra decifra() per vedere i parametri da passare per decifrare
  * @author TomRiddle901
- * @version 1.0.1
+ * @version 1.0.2
  */
 public class Cifrario {
     public Cifrario(){
