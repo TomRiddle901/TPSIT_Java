@@ -59,7 +59,7 @@ public class Cifrario {
                 int spostamento = keyword.charAt(keyIndex % keyword.length()) - 'A';
 
                 // Decifratura
-                parolaInCharArray[i] = (char) ((carattere - 'A' + spostamento) % 26 + 'A');
+                parolaInCharArray[i] = (char) ((carattere - 'A' - spostamento + 26) % 26 + 'A');
                 keyIndex++;
             }
         }
