@@ -7,28 +7,31 @@
       <Entity type="Class">
         <Name>GiocaNumeri</Name>
         <Access>Public</Access>
-        <Location left="27" top="674" />
-        <Size width="235" height="111" />
+        <Location left="25" top="674" />
+        <Size width="235" height="145" />
         <Collapsed>False</Collapsed>
+        <Member type="Field">private static ArrayList&lt;Thread&gt; threads</Member>
         <Member type="Method">public void main()</Member>
-        <Member type="Method">public void getInfoThread(Thread thread)</Member>
+        <Member type="Method">private void getInfoThread(Thread thread)</Member>
+        <Member type="Method">private static void lanciaGioco()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Giocatore</Name>
         <Access>Public</Access>
         <Location left="497" top="607" />
-        <Size width="342" height="298" />
+        <Size width="436" height="315" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String nome</Member>
         <Member type="Field">private String parolaCifrata</Member>
         <Member type="Field">private int punteggio</Member>
-        <Member type="Field">private File file</Member>
         <Member type="Field">private int idGiocatore</Member>
-        <Member type="Constructor">public Giocatore(String nome, String parola, String keyword)</Member>
+        <Member type="Field">private BufferedReader tastiera</Member>
+        <Member type="Constructor">public Giocatore(String nome, String parola, String keyword, int idGiocatore)</Member>
         <Member type="Method">public void setPunteggio(int punti)</Member>
         <Member type="Method">public String getNome()</Member>
         <Member type="Method">public String getParolaCifrata()</Member>
+        <Member type="Method">public int getIdGiocatore()</Member>
         <Member type="Method">private void gioca()</Member>
         <Member type="Method">private void comunica()</Member>
         <Member type="Method">private void getDettagli()</Member>
@@ -81,11 +84,12 @@
         <Name>Cifrario</Name>
         <Access>Public</Access>
         <Location left="1023" top="534" />
-        <Size width="329" height="128" />
+        <Size width="343" height="145" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Cifrario()</Member>
         <Member type="Method">public static String cifra(String parolaDaCifrare, String keyword)</Member>
         <Member type="Method">public static String decifra(String parolaCifrata, String keyword)</Member>
+        <Member type="Method">public static void convalidaParametri(String testo, String keyword)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -99,8 +103,6 @@
     </Entities>
     <Relationships>
       <Relationship type="Dependency" first="0" second="1">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
       </Relationship>
@@ -145,12 +147,16 @@
         </BendPoint>
       </Relationship>
       <Relationship type="Association" first="1" second="6">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="1" second="5">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
