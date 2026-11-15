@@ -5,9 +5,15 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ---
 
 ## {0.1.5} 15/11/2026
+### Aggiunto
+- `Cifrario`: metodo `convalidaParametri()` per convalidare i parametri che non sono vuoti o caratteri non ammessi
+
 ### Fixed
 - Metodo `cifra()`: corretto il calcolo dello spostamento del carattere
 - Metodo `decifra()`: corretto calcolo dello spostamento con una sottrazione e aggiunta somma di 26 per non far restituire numeri negativi
+
+### Aggornato
+- JavaDoc della classe `Cifrario`
 
 ## {0.1.4} 11/11/2026
 ### Aggiunto
