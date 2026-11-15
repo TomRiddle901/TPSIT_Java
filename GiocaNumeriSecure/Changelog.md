@@ -4,6 +4,11 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## {0.1.5} 15/11/2026
+### Fixed
+- Metodo `cifra()`: corretto il calcolo dello spostamento del carattere
+- Metodo `decifra()`: corretto calcolo dello spostamento con una sottrazione e aggiunta somma di 26 per non far restituire numeri negativi
+
 ## {0.1.4} 11/11/2026
 ### Aggiunto
 - Array list di thread dinamico in base a quanti giocatori l'utente vuole inserire
