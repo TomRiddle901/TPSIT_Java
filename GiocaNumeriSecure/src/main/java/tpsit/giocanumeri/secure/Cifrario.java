@@ -64,4 +64,18 @@ public class Cifrario {
 
         return new String(parolaInCharArray); // Restituisce la parola decifrata
     }
+
+    private void convalidaParametri(String testo, String keyword) throws Exception{
+        if (testo == null || testo.isEmpty()){
+            throw new Exception("Devi inserire una parola da cifrare");
+        }
+
+        if (keyword == null || keyword.isEmpty()){
+            throw new Exception("La keyword non può essere vuota");
+        }
+
+        if (!keyword.matches("[a-zA-Z]+") || !testo.matches("[a-zA-Z]+")){
+            throw new Exception("Testo inserito non valido: puoi inserire solo caratteri (a-z o A-Z)");
+        }
+    }
 }
