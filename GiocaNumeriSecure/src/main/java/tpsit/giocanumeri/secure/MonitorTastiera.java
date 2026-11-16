@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  * Classe monitor per gestire l'input da tastiera durante il multithreading
  * @see #inputTastiera() inputTastiera() per comprendere meglio in senso della classe
  * @author TomRiddle901
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class MonitorTastiera {
     private String testoTastiera;

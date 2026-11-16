@@ -8,9 +8,13 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Aggiornato
 - `Giocatore`: La classe `MonitorTastiera` è un puntatore all'oggetto creato dal `GiocaNumeri` così si gestisce il semaforo
 - `GiocaNumeri`: crea gli oggetti `Cifrario` e `MonitorTastiera` condivisi tra i vari thread con in puntatori
+- JavaDoc del progetto
 
 ### Fixed
 - `GiocaNumeri`: l'oggetto cifrario non si crea più volte nel while ma si crea 1 volta valido per tutti i thread
+
+### Rimosso
+- Utilizzo di `BufferedReader` in `GiocaNumeri`, ora l'input da tastiera viene completamente gestito dalla classe monitor
 
 ### Documentazione
 - Materiale del docente di TPSIT
