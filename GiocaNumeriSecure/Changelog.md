@@ -7,6 +7,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ## {0.1.7} 16/11/2026
 ### Aggiornato
 - `Giocatore`: il costruttorre ha come parametro il puntatore alla classe `Cifrario` 
+- `GiocaNumeri`: l'oggetto cifrario viene creato dal thread princiaple e viene passato il puntatore alla classe `Giocatore`
 
 ### Rimosso
 - Metodi static all'interno del cifrario
