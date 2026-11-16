@@ -5,6 +5,9 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ---
 
 ## {0.1.8} 16/11/2026
+### Aggiunto
+- `MonitorTastiera`: parametro `messaggio` per visualizzare un messaggio personalizzato prima dell'input da tastiera
+
 ### Aggiornato
 - `Giocatore`: La classe `MonitorTastiera` è un puntatore all'oggetto creato dal `GiocaNumeri` così si gestisce il semaforo
 - `GiocaNumeri`: crea gli oggetti `Cifrario` e `MonitorTastiera` condivisi tra i vari thread con in puntatori
@@ -15,6 +18,8 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ### Rimosso
 - Utilizzo di `BufferedReader` in `GiocaNumeri`, ora l'input da tastiera viene completamente gestito dalla classe monitor
+- `Giocatore`: creazione della classe `MonitorTastiera`, ora utilizza il puntatore
+- `GiocaNumeri`: rimossa stampa dei messaggi prima dell'input, lo fa la classe monitor tastiera
 
 ### Documentazione
 - Materiale del docente di TPSIT
