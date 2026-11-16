@@ -4,6 +4,21 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## {0.1.8} 16/11/2026
+### Aggiornato
+- `Giocatore`: La classe `MonitorTastiera` è un puntatore all'oggetto creato dal `GiocaNumeri` così si gestisce il semaforo
+- `GiocaNumeri`: crea gli oggetti `Cifrario` e `MonitorTastiera` condivisi tra i vari thread con in puntatori
+
+### Fixed
+- `GiocaNumeri`: l'oggetto cifrario non si crea più volte nel while ma si crea 1 volta valido per tutti i thread
+
+### Documentazione
+- Materiale del docente di TPSIT
+
+### Todo
+- Scelta personalizzata del'utente del numero che deve raggiungere il giocatore (input tramite classe Giocatore)
+- Salvataggio su file dei dati dei giocatori quando finiscono di giocare, prima di comunicare il risultato all'utente
+
 ## {0.1.7} 16/11/2026
 ### Aggiornato
 - `Giocatore`: il costruttorre ha come parametro il puntatore alla classe `Cifrario` 
