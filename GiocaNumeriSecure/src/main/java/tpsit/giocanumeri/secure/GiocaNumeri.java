@@ -62,6 +62,11 @@ public class GiocaNumeri {
 
             keyword = tastieraObj.inputTastiera("Chiave per decifrare: ");
 
+            // Controllo che non ci siano stati errori prima
+            if (nome.equals("erroreCatturaInput") || parola.equals("erroreCatturaInput") || keyword.equals("erroreCatturaInput")){
+                throw new Exception("Errore nella gestione dell'input della classe MonitorTastiera");
+            }
+
             scelta = tastieraObj.inputTastiera("Vuoi creare un altro giocatore? [y/n]: ").toLowerCase();
 
             cifrarioObj.convalidaParametri(parola, keyword);
