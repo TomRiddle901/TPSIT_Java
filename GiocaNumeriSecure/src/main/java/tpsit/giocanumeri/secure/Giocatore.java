@@ -14,6 +14,7 @@ public class Giocatore extends Thread{
     private String parolaCifrata;
     private int punteggio;
     int idGiocatore;
+    Cifrario cifrario;
     BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
 
     /**
@@ -23,9 +24,10 @@ public class Giocatore extends Thread{
      * @param keyword Parola chiave per cifrare la parola
      * @see Cifrario Cifrario.java per vedere il metodo di crittografia utilizzato
      */
-    public Giocatore(String nome, String parola, String keyword, int idGiocatore){
+    public Giocatore(String nome, String parola, String keyword, int idGiocatore, Cifrario cifrario){
         this.nome = nome;
-        this.parolaCifrata = Cifrario.cifra(parola, keyword);
+        this.cifrario = cifrario;
+        this.parolaCifrata = this.cifrario.cifra(parola, keyword);
         this.idGiocatore = idGiocatore;
     }
 
@@ -100,7 +102,7 @@ public class Giocatore extends Thread{
                 System.err.println("Errore nella cattura dell'input, vedere sopra il messaggio di errore.");
                 System.out.println("La chiave non verrà visualizzata per questo errore.");
             }else{
-                parolaDecifrata = Cifrario.decifra(parolaCifrata, keyword);
+                parolaDecifrata = cifrario.decifra(parolaCifrata, keyword);
                 System.out.println(nome + ": " + punteggio + "pt, la tua parola decifrata è: " + parolaDecifrata);
             }
         //}catch (IOException ioException){
