@@ -15,7 +15,7 @@ public class Giocatore extends Thread{
     private int punteggio;
     int idGiocatore;
     Cifrario cifrario;
-    BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
+    // BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
 
     /**
      * Costruttore della classe Giocatore
@@ -90,12 +90,13 @@ public class Giocatore extends Thread{
      */
     private void comunica(){
         String keyword, parolaDecifrata;
+        MonitorTastiera tastiera = new MonitorTastiera();
         //try{
             System.out.println("Per visualizzare la parola decifrata, digita la keyword altrimenti alscia vuoto");
             System.out.print("Keyword: ");
             // keyword = tastiera.readLine();
 
-            keyword = MonitorTastiera.inputTastiera();
+            keyword = tastiera.inputTastiera();
 
             if (keyword.isEmpty()){
                 System.out.println(nome + ": " + punteggio + "pt la tua parola cifrata è: " + parolaCifrata);
