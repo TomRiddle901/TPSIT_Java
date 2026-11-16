@@ -7,7 +7,7 @@ package tpsit.giocanumeri.secure;
  * @see #decifra(String, String) decifra() per vedere i parametri da passare per decifrare
  * @see #convalidaParametri(String, String) convalidaParametri() per comprendere la convalida
  * @author TomRiddle901
- * @version 1.1.5
+ * @version 1.1.6
  */
 public class Cifrario {
     public Cifrario(){}
@@ -18,7 +18,7 @@ public class Cifrario {
      * @param keyword Parola chiave
      * @return java.lang.String
      */
-    public static String cifra(String parolaDaCifrare, String keyword){
+    public String cifra(String parolaDaCifrare, String keyword){
         // Trasforma la String in un array di char (tutti maiuscoli)
         char[] parolaInCharArray = parolaDaCifrare.toUpperCase().toCharArray();
         keyword = keyword.toUpperCase();
@@ -45,7 +45,7 @@ public class Cifrario {
      * @param keyword Parola chiave
      * @return java.lang.String
      */
-    public static String decifra(String parolaCifrata, String keyword){
+    public String decifra(String parolaCifrata, String keyword){
         // Trasforma la String in un array di char tutti maiuscoli
         char[] parolaInCharArray = parolaCifrata.toUpperCase().toCharArray();
         keyword = keyword.toUpperCase();
@@ -79,7 +79,7 @@ public class Cifrario {
      *     <li><code>"Keyword non valida: puoi inserire solo caratteri (a-z o A-Z)"</code> se <code>keyword</code> non rispetta la RegEx <code>[a-zA-Z]+</code></li>
      * </ul>
      */
-    public static void convalidaParametri(String testo, String keyword) throws Exception{
+    public void convalidaParametri(String testo, String keyword) throws Exception{
         String messaggioException = "";
         if (testo == null || testo.isEmpty()){
             messaggioException += "La parola da cifrare non può essere vuota\n";
