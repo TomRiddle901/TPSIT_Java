@@ -91,7 +91,6 @@ public class Giocatore extends Thread{
      */
     private void comunica(){
         String keyword, parolaDecifrata;
-        MonitorTastiera tastiera = new MonitorTastiera();
         //try{
             System.out.println("Per visualizzare la parola decifrata, digita la keyword altrimenti alscia vuoto");
             // System.out.print("Keyword: ");
