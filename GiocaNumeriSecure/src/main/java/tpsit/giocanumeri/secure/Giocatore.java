@@ -7,7 +7,7 @@ import java.io.*;
  * @see #Giocatore(String nome, String parola, String keyword, int idGiocatore, Cifrario cifrario, MonitorTastiera tastiera) Giocatore()
  * per visualizzare i parametri richiesti per creare l'oggetto
  * @author TomRiddle901
- * @version 0.2.6
+ * @version 0.2.7
  */
 public class Giocatore extends Thread{
     private String nome;
@@ -91,25 +91,20 @@ public class Giocatore extends Thread{
      */
     private void comunica(){
         String keyword, parolaDecifrata;
-        //try{
-            System.out.println("Per visualizzare la parola decifrata, digita la keyword altrimenti alscia vuoto");
-            // System.out.print("Keyword: ");
-            // keyword = tastiera.readLine();
 
-            keyword = tastiera.inputTastiera("Keyword: ");
+        System.out.println("Per visualizzare la parola decifrata, digita la keyword altrimenti alscia vuoto");
 
-            if (keyword.isEmpty()){
-                System.out.println(nome + ": " + punteggio + "pt la tua parola cifrata è: " + parolaCifrata);
-            }else if (keyword.equals("erroreCatturaInput")){
-                System.err.println("Errore nella cattura dell'input, vedere sopra il messaggio di errore.");
-                System.out.println("La chiave non verrà visualizzata per questo errore.");
-            }else{
-                parolaDecifrata = cifrario.decifra(parolaCifrata, keyword);
-                System.out.println(nome + ": " + punteggio + "pt, la tua parola decifrata è: " + parolaDecifrata);
-            }
-        //}catch (IOException ioException){
-            //System.err.println("Errore di comunicazione della tastiera con la RAM");
-        //}
+        keyword = tastiera.inputTastiera("Keyword: ");
+
+        if (keyword.isEmpty()){
+            System.out.println(nome + ": " + punteggio + "pt la tua parola cifrata è: " + parolaCifrata);
+        }else if (keyword.equals("erroreCatturaInput")){
+            System.err.println("Errore nella cattura dell'input, vedere sopra il messaggio di errore.");
+            System.out.println("La chiave non verrà visualizzata per questo errore.");
+        }else{
+            parolaDecifrata = cifrario.decifra(parolaCifrata, keyword);
+            System.out.println(nome + ": " + punteggio + "pt, la tua parola decifrata è: " + parolaDecifrata);
+        }
     }
 
     /**
