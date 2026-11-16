@@ -7,6 +7,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ## {0.1.8} 16/11/2026
 ### Aggiunto
 - `MonitorTastiera`: parametro `messaggio` per visualizzare un messaggio personalizzato prima dell'input da tastiera
+- `GiocaNumeri`: eccezione personalizzata nel caso si rilevano errori nella classe `MonitorTastiera`
 
 ### Aggiornato
 - `Giocatore`: La classe `MonitorTastiera` è un puntatore all'oggetto creato dal `GiocaNumeri` così si gestisce il semaforo
@@ -25,8 +26,9 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - Materiale del docente di TPSIT
 
 ### Todo
-- Scelta personalizzata del'utente del numero che deve raggiungere il giocatore (input tramite classe Giocatore)
+- *Scelta personalizzata del'utente del numero che deve raggiungere il giocatore (input tramite classe Giocatore)*
 - Salvataggio su file dei dati dei giocatori quando finiscono di giocare, prima di comunicare il risultato all'utente
+- *Migliorare la stampa per richiedere la keyword*
 
 ## {0.1.7} 16/11/2026
 ### Aggiornato
