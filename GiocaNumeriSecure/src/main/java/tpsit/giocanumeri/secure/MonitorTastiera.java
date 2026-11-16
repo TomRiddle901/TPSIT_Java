@@ -16,8 +16,7 @@ public class MonitorTastiera {
             return testoTastiera;
         }catch (IOException ioException){
             System.err.println("Errore di comunicazione della tastiera con la RAM");
+            return "erroreCatturaInput";
         }
-
-        return "erroreCatturaInput";
     }
 }
