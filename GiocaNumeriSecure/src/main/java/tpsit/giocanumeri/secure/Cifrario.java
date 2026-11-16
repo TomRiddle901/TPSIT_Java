@@ -1,7 +1,7 @@
 package tpsit.giocanumeri.secure;
 
 /**
- * Questa classe usa come tecnica di crittografia il cifrario di Vigenère
+ * Questa classe usa come tecnica di crittografia il cifrario di Vigenére
  * per cifrare parole o frasi
  * @see #cifra(String, String) cifra() per vedere i parametri da passare per cifrare
  * @see #decifra(String, String) decifra() per vedere i parametri da passare per decifrare
