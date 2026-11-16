@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Classe di avvio principale di tutto il progetto
  * @author TomRiddle901
- * @version 0.2.1
+ * @version 0.2.2
  */
 public class GiocaNumeri {
     /**

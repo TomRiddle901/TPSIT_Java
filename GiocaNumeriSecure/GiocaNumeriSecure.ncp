@@ -7,7 +7,7 @@
       <Entity type="Class">
         <Name>GiocaNumeri</Name>
         <Access>Public</Access>
-        <Location left="25" top="674" />
+        <Location left="35" top="674" />
         <Size width="235" height="145" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private static ArrayList&lt;Thread&gt; threads</Member>
@@ -103,12 +103,12 @@
       <Entity type="Class">
         <Name>MonitorTastiera</Name>
         <Access>Public</Access>
-        <Location left="1273" top="611" />
-        <Size width="163" height="128" />
+        <Location left="287" top="796" />
+        <Size width="258" height="128" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String tastiera</Member>
         <Member type="Constructor">public MonitorTastiera()</Member>
-        <Member type="Method">public String inputTastiera()</Member>
+        <Member type="Method">public String inputTastiera(String messaggio)</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
@@ -187,11 +187,19 @@
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Dependency" first="1" second="7">
+      <Relationship type="Dependency" first="0" second="7">
         <Label>
         </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="1" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
       </Relationship>
     </Relationships>
   </ProjectItem>
