@@ -1,6 +1,5 @@
 package tpsit.giocanumeri.secure;
 
-import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -54,34 +53,27 @@ public class GiocaNumeri {
         String nome, parola, keyword, scelta;
         Cifrario cifrarioObj = new Cifrario();
         MonitorTastiera tastieraObj = new MonitorTastiera();
-        BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         int idGiocatore = threads.size();
 
-        try{
-            do{
-                System.out.print("Nome del giocatore: ");
-                nome = tastiera.readLine();
-                System.out.print("Parola segreta: ");
-                parola = tastiera.readLine();
-                System.out.print("Chiave per decifrare: ");
-                keyword = tastiera.readLine();
-                System.out.print("Vuoi creare un altro giocatore? [y/n]: ");
-                scelta = tastiera.readLine().toLowerCase();
+        do{
+            System.out.print("Nome del giocatore: ");
+            nome = tastieraObj.inputTastiera();
+            System.out.print("Parola segreta: ");
+            parola = tastieraObj.inputTastiera();
+            System.out.print("Chiave per decifrare: ");
+            keyword = tastieraObj.inputTastiera();
 
-                cifrarioObj.convalidaParametri(parola, keyword);
+            System.out.print("Vuoi creare un altro giocatore? [y/n]: ");
+            scelta = tastieraObj.inputTastiera().toLowerCase();
 
-                threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore, cifrarioObj, tastieraObj)));
-                idGiocatore++;
-            }while (!scelta.equals("n"));
+            cifrarioObj.convalidaParametri(parola, keyword);
 
-            for (int i = 0; i < threads.size(); i++){
-                threads.get(i).start();
-            }
+            threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore, cifrarioObj, tastieraObj)));
+            idGiocatore++;
+        }while (!scelta.equals("n"));
 
-        }catch (IOException ioException){
-            System.err.println("Errore di comunicazione della stastiera con la RAM");
-        }catch (NullPointerException nullPointerEx) {
-            System.err.println("Input non rilevato");
+        for (int i = 0; i < threads.size(); i++){
+            threads.get(i).start();
         }
     }
 }
