@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 
 /**
  * Classe monitor per gestire l'input da tastiera durante il multithreading
- * @see #inputTastiera() inputTastiera() per comprendere meglio in senso della classe
+ * @see #inputTastiera(String messaggio) inputTastiera() per comprendere meglio in senso della classe
  * @author TomRiddle901
- * @version 1.0.1
+ * @version 1.0.2
  */
 public class MonitorTastiera {
     private String testoTastiera;
@@ -19,11 +19,13 @@ public class MonitorTastiera {
      * Cattura l'input della tastiera e lo restituisce come String.<br>
      * Questo metodo contiene synchronized per gestire l'input nel caso più Thread
      * richiedono l'input da tastiera
+     * @param messaggio Messaggio di output personalizzato da visualizzare prima dell'input
      * @return String: testo di input dato dalla tastiera
      */
-    public synchronized String inputTastiera(){
+    public synchronized String inputTastiera(String messaggio){
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         try{
+            System.out.print(messaggio);
             testoTastiera = tastiera.readLine();
             return testoTastiera;
         }catch (IOException ioException){
