@@ -94,7 +94,7 @@ public class Giocatore extends Thread{
 
         System.out.println("Per visualizzare la parola decifrata, digita la keyword altrimenti alscia vuoto");
 
-        keyword = tastiera.inputTastiera("Keyword: ");
+        keyword = tastiera.inputTastiera("Keyword " + nome + ": ");
 
         if (keyword.isEmpty()){
             System.out.println(nome + ": " + punteggio + "pt la tua parola cifrata è: " + parolaCifrata);
