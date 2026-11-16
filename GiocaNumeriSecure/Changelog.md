@@ -8,6 +8,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Aggiornato
 - `Giocatore`: il costruttorre ha come parametro il puntatore alla classe `Cifrario` 
 - `GiocaNumeri`: l'oggetto cifrario viene creato dal thread princiaple e viene passato il puntatore alla classe `Giocatore`
+- Diagramma UML
 
 ### Rimosso
 - Metodi static all'interno del cifrario
