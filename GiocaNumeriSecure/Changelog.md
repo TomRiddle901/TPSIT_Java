@@ -4,6 +4,13 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## {0.1.7} 16/11/2026
+### Aggiornato
+- `Giocatore`: il costruttorre ha come parametro il puntatore alla classe `Cifrario` 
+
+### Rimosso
+- Metodi static all'interno del cifrario
+
 ## {0.1.6} 16/11/2026
 ### Aggiunto
 - Classe monitor `MonitorTastiera` per controllare l'input da tastiera durante il multithreading per evitare sovrapposizioni
