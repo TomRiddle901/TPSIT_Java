@@ -18,6 +18,6 @@ public class MonitorTastiera {
             System.err.println("Errore di comunicazione della tastiera con la RAM");
         }
 
-        return "";
+        return "erroreCatturaInput";
     }
 }
