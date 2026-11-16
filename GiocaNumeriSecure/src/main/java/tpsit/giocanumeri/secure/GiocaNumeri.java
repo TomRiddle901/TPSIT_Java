@@ -56,15 +56,13 @@ public class GiocaNumeri {
         int idGiocatore = threads.size();
 
         do{
-            System.out.print("Nome del giocatore: ");
-            nome = tastieraObj.inputTastiera();
-            System.out.print("Parola segreta: ");
-            parola = tastieraObj.inputTastiera();
-            System.out.print("Chiave per decifrare: ");
-            keyword = tastieraObj.inputTastiera();
+            nome = tastieraObj.inputTastiera("Nome del giocatore: ");
 
-            System.out.print("Vuoi creare un altro giocatore? [y/n]: ");
-            scelta = tastieraObj.inputTastiera().toLowerCase();
+            parola = tastieraObj.inputTastiera("Parola segreta: ");
+
+            keyword = tastieraObj.inputTastiera("Chiave per decifrare: ");
+
+            scelta = tastieraObj.inputTastiera("Vuoi creare un altro giocatore? [y/n]: ").toLowerCase();
 
             cifrarioObj.convalidaParametri(parola, keyword);
 
