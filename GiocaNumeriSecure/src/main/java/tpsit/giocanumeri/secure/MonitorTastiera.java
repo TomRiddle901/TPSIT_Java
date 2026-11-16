@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
  * @version 1.0.0
  */
 public class MonitorTastiera {
-    private static String testoTastiera;
+    private String testoTastiera;
 
     public MonitorTastiera(){}
 
@@ -21,7 +21,7 @@ public class MonitorTastiera {
      * richiedono l'input da tastiera
      * @return String: testo di input dato dalla tastiera
      */
-    public static synchronized String inputTastiera(){
+    public synchronized String inputTastiera(){
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         try{
             testoTastiera = tastiera.readLine();

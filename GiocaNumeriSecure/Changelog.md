@@ -10,6 +10,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ### Rimosso
 - Metodi static all'interno del cifrario
+- Metodi e attributi statci all'interno della classe monitor
 
 ## {0.1.6} 16/11/2026
 ### Aggiunto
