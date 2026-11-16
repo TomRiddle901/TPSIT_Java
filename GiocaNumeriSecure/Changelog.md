@@ -4,6 +4,14 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## {0.1.6} 16/11/2026
+### Aggiunto
+- Classe monitor `MonitorTastiera` per controllare l'input da tastiera durante il multithreading per evitare sovrapposizioni
+- `MonitorTastiera`: metodo che restituisce l'input della tastiera
+
+### Aggiornato
+- `Giocatore`: rimosso try catch e aggiunta classemonitor dell' input da testiera
+
 ## {0.1.5} 15/11/2026
 ### Aggiunto
 - `Cifrario`: metodo `convalidaParametri()` per convalidare i parametri che non sono vuoti o caratteri non ammessi
