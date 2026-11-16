@@ -52,11 +52,13 @@ public class GiocaNumeri {
      */
     private static void lanciaGioco() throws Exception{
         String nome, parola, keyword, scelta;
+        Cifrario cifrario;
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         int idGiocatore = threads.size();
 
         try{
             do{
+                cifrario = new Cifrario();
                 System.out.print("Nome del giocatore: ");
                 nome = tastiera.readLine();
                 System.out.print("Parola segreta: ");
@@ -66,9 +68,9 @@ public class GiocaNumeri {
                 System.out.print("Vuoi creare un altro giocatore? [y/n]: ");
                 scelta = tastiera.readLine().toLowerCase();
 
-                Cifrario.convalidaParametri(parola, keyword);
+                cifrario.convalidaParametri(parola, keyword);
 
-                threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore)));
+                threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore, cifrario)));
                 idGiocatore++;
             }while (!scelta.equals("n"));
 
