@@ -13,8 +13,11 @@ public class MonitorTastiera {
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         try{
             testoTastiera = tastiera.readLine();
+            return testoTastiera;
         }catch (IOException ioException){
             System.err.println("Errore di comunicazione della tastiera con la RAM");
         }
+
+        return "";
     }
 }
