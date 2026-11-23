@@ -6,4 +6,8 @@ public class Counter {
     public synchronized void increment(){
         count++;
     }
+
+    public int getCount(){
+        return count;
+    }
 }
