@@ -5,8 +5,8 @@ public class Main {
         Counter counter = new Counter();
 
         // Create multiple threads to increment the counter
-        Thread t1 = new Thread(() -> counter.increment());
-        Thread t2 = new Thread(() -> counter.increment());
+        Thread t1 = new Thread(new User(counter));
+        Thread t2 = new Thread(new User(counter));
 
         t1.start();
         t2.start();
