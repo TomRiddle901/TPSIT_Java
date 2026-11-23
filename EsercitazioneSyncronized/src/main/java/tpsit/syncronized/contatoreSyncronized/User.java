@@ -1,7 +1,11 @@
 package tpsit.syncronized.contatoreSyncronized;
 
 public class User implements Runnable{
-    Counter counter = new Counter();
+    Counter counter;
+
+    public User(Counter counter){
+        this.counter = counter;
+    }
 
     @Override
     public void run(){
