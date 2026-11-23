@@ -1,4 +1,4 @@
-package tpsit.syncronized.contatore;
+package tpsit.syncronized.contatoreSyncronized;
 
 public class Counter {
     private int count = 0;

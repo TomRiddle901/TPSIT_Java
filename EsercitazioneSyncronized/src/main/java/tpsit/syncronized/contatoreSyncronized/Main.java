@@ -1,4 +1,4 @@
-package tpsit.syncronized.contatore;
+package tpsit.syncronized.contatoreSyncronized;
 
 public class Main {
     static void main() {
