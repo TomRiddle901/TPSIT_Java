@@ -11,20 +11,14 @@ public class ContaDieci implements Runnable{
 
     @Override
     public void run(){
-        try {
-            while (i < n) {
-                Thread.currentThread().sleep(2000);
-                contatore.increment();
+        while (i < n) {
+            contatore.increment();
 
-                System.out.println(Thread.currentThread().getName() +
-                        "\ni: " + i +
-                        " contatore: " + contatore.getCount());
+            System.out.println(Thread.currentThread().getName() +
+                    "\ni: " + i +
+                    " contatore: " + contatore.getCount());
 
-                i++;
-            }
-        }catch (InterruptedException interruptedEx){
-            System.err.println("Errone nel passaggio da running a sleeping");
-            interruptedEx.printStackTrace();
+            i++;
         }
     }
 }
