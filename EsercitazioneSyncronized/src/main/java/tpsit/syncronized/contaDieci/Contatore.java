@@ -1,13 +1,13 @@
 package tpsit.syncronized.contaDieci;
 
-public class Contatore implements Runnable{
-    private int contatore;
-
-    public Contatore(){
-
-    }
+public class Contatore {
+    private int count = 0;
 
     public synchronized void increment(){
-        contatore++;
+        count++;
+    }
+
+    public int getCount(){
+        return count;
     }
 }
