@@ -11,7 +11,6 @@ public class ContaDieci implements Runnable{
 
     @Override
     public void run(){
-        i++; // Contatore incrementato per far avviare il ciclo
         try {
             while (i < n) {
                 Thread.currentThread().sleep(2000);
@@ -20,6 +19,8 @@ public class ContaDieci implements Runnable{
                 System.out.println(Thread.currentThread().getName() +
                         "\ni: " + i +
                         " contatore: " + contatore.getCount());
+
+                i++;
             }
         }catch (InterruptedException interruptedEx){
             System.err.println("Errone nel passaggio da running a sleeping");
