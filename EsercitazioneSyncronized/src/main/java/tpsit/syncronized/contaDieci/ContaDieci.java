@@ -2,7 +2,7 @@ package tpsit.syncronized.contaDieci;
 
 public class ContaDieci implements Runnable{
     private int i;
-    private int n = 10;
+    int n = 10;
     private Contatore contatore;
 
     public ContaDieci(Contatore contatore){
