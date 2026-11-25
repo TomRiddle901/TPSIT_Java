@@ -7,4 +7,11 @@ public class ContaDieci implements Runnable{
     public ContaDieci(Contatore contatore){
         this.contatore = contatore;
     }
+
+    @Override
+    public void run(){
+        for (i = 0; i < 11; i++){
+            contatore.increment();
+        }
+    }
 }
