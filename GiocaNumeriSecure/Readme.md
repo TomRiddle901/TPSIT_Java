@@ -46,3 +46,13 @@ Parola Cifrata: <TESTO_CIFRATO>
   * `Exception`: sollevata da `Cifrario.convalidaParametri()` (con messaggi concatenati se sia la parola che la keyword non sono valide) e da `GiocaNumeri.lanciaGioco()` in caso di errore in fase di acquisizione input
 * **Eccezioni non controllate**:
   * `NullPointerException`: catturata esplicitamente nel blocco `finally` di `GetoreFile.salva()` qualora `bufferedWriter.close()` venga invocato su un riferimento `null` a seguito di un errore precedente in apertura del file
+
+---
+
+## Prerequisiti di esecuzione
+
+1. **Ambiente**: `JDK 21+` (il progetto utilizza `Thread.currentThread().threadId()` e instance main method `static void main()`)
+
+2. **Directory di salvataggio**: Assicurarsi che nella root di esecuzione sia presente la cartella `GiocaNumeriSecure/` affinché `FileWriter` possa creare correttamente i file `.txt`
+
+3. **Avvio**: Compilare ed eseguire la classe `tpsit.giocanumeri.secure.GiocaNumeri`, seguire le istruzioni a schermo per inserire i giocatori e, al termine del conteggio di ciascun thread, digitare la keyword per visualizzare la parola decifrata (oppure lasciare vuoto per mostrarla cifrata)
