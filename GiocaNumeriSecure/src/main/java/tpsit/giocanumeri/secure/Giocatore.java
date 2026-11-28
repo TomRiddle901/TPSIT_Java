@@ -7,7 +7,7 @@ import java.io.*;
  * @see #Giocatore(String nome, String parola, String keyword, int idGiocatore, Cifrario cifrario, MonitorTastiera tastiera) Giocatore()
  * per visualizzare i parametri richiesti per creare l'oggetto
  * @author TomRiddle901
- * @version 0.3.0
+ * @version 1.0.0
  */
 public class Giocatore extends Thread{
     private String nome;
@@ -44,7 +44,7 @@ public class Giocatore extends Thread{
 
     /**
      * Getter che restituisce il come del giocatore
-     * @return java.lang.String
+     * @return java.lang.String nome
      */
     public String getNome(){
         return nome;
@@ -52,7 +52,7 @@ public class Giocatore extends Thread{
 
     /**
      * Getter che restituisce la parolaCifrata cifrata
-     * @return java.lang.String
+     * @return java.lang.String parolaCifrata
      */
     public String getParolaCifrata(){
         return parolaCifrata;
@@ -60,16 +60,24 @@ public class Giocatore extends Thread{
 
     /**
      * Getter per ottenere l'ID del giocatore
-     * @return long
+     * @return long idGiocatore
      */
     public long getIdGiocatore(){
         return idGiocatore;
     }
 
+    /**
+     * Getter per ottenere il punteggio del giocatore
+     * @return int punteggio
+     */
     public int getPunteggio(){
         return punteggio;
     }
 
+    /**
+     * Getter per ottenere il numero di arrivo che deve raggiungere il giocatore
+     * @return int numero
+     */
     public int getNumero(){
         return numero;
     }
