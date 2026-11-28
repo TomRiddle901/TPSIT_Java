@@ -19,13 +19,14 @@ public class ContoCorrente {
         Random importoOperazioneRandom = new Random();
         int indiceCasuale = numeroRandom.nextInt(operazioni.length);
         double importoRandom = importoOperazioneRandom.nextDouble(0, 500);
+        double importoRandomSemplificato = (double) Math.round(importoRandom * 100.0) / 100; // Toglie tutti i decimali e ne lascia 2 es: 0.99
 
         switch (operazioni[indiceCasuale]){
             case "preleva":
-                preleva(importoRandom);
+                preleva(importoRandomSemplificato);
                 break;
             case "deposita":
-                deposita(importoRandom);
+                deposita(importoRandomSemplificato);
                 break;
             case "controlla":
                 controlla();
