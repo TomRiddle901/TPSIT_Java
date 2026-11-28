@@ -28,4 +28,13 @@ public class ContoCorrente {
                 break;
         }
     }
+
+    public synchronized void preleva(double importo){
+        if (saldo <= 0){
+            System.out.println("Impossibile prelevare.\nIl tuo saldo attuale è: €" + saldo);
+        }else {
+            saldo -= importo;
+            System.
+        }
+    }
 }
