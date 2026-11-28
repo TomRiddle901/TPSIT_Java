@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
  * Classe che gestisce il salvataggio/caricamento dei dati del giocatore su un file
  * @see #salva(Giocatore giocatore) salva() per comprendere il salvataggio
  * @author TomRiddle901
- * @version 1.0.3
+ * @version 1.0.4
  */
 public class GetoreFile {
     private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
@@ -27,7 +27,7 @@ public class GetoreFile {
         long idGiocatore = giocatore.getIdGiocatore();
         String dataFormattata = LocalDate.now().format(formatoGGMMYYYY);
         String nomeFile = idGiocatore + " - gioco del " + dataFormattata + ".txt";
-        BufferedWriter bufferedWriter;
+        BufferedWriter bufferedWriter = null;
 
         File file = new File("GiocaNumeriSecure/" + nomeFile);
 
@@ -40,6 +40,16 @@ public class GetoreFile {
         }catch (IOException ioException) {
             System.err.println("Errore nella comunicazione I/O della RAM con il disco di sistema");
             ioException.printStackTrace();
+        }finally {
+            try {
+                bufferedWriter.close();
+            }catch (IOException ioException){
+                System.err.println("Errore nella comunicazione I/O della RAM con il disco di sistema");
+                ioException.printStackTrace();
+            }catch (NullPointerException nullPointerEx){
+                System.err.println("Errore: il bufferedWriter non è stato inizializzato o è null");
+                nullPointerEx.printStackTrace();
+            }
         }
     }
 }
