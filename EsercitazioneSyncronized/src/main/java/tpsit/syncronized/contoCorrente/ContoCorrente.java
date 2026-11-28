@@ -53,4 +53,8 @@ public class ContoCorrente {
             saldo += importo;
         }
     }
+
+    public synchronized void controlla(){
+        System.out.println("Saldo attuale: €" + saldo);
+    }
 }
