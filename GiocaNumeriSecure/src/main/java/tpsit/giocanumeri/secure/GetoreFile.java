@@ -21,7 +21,7 @@ public class GetoreFile {
     }
 
     public synchronized void salva(){
-        long idGiocatore = giocatore.threadId();
+        long idGiocatore = giocatore.getIdGiocatore();
         String dataFormattata = LocalDate.now().format(formatoGGMMYYYY);
         String nomeFile = idGiocatore + " - gioco del " + dataFormattata + ".txt";
 
@@ -29,6 +29,10 @@ public class GetoreFile {
 
         try{
             bufferedWriter = new BufferedWriter(new FileWriter(file));
+
+            bufferedWriter.write(
+                    giocatore.getParolaCifrata()
+            );
         } catch (IOException ioException) {
             System.err.println("Errore nella comunicazione I/O della RAM con il disco di sistema");
             ioException.printStackTrace();
