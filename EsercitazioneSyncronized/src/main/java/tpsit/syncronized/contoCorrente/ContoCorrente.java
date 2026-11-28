@@ -6,6 +6,7 @@ import java.time.LocalDate;
 
 public class ContoCorrente {
     private double saldo;
+    private int numeroConto;
     private String[] operazioni = {"preleva", "deposita", "controlla"};
     ArrayList<String> movimenti = new ArrayList<>();
     LocalDate dataAttuale = LocalDate.now();
