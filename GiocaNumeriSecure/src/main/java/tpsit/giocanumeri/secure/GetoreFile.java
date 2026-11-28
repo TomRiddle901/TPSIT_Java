@@ -12,13 +12,11 @@ import java.time.format.DateTimeFormatter;
 public class GetoreFile {
     private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
     private Giocatore giocatore;
-    private InputStream inputStreamFile;
+    private InputStream inputStreamFile = null;
     private BufferedReader bufferFile;
 
-    public GetoreFile(Giocatore giocatore, InputStream inputStreamFile, BufferedReader bufferFile){
+    public GetoreFile(Giocatore giocatore){
         this.giocatore = giocatore;
-        this.inputStreamFile = inputStreamFile;
-        this.bufferFile = bufferFile;
     }
 
     public synchronized void salva(){
@@ -31,7 +29,7 @@ public class GetoreFile {
         try{
             inputStreamFile = new FileInputStream(file);
 
-            bufferFile =
+            bufferFile = new BufferedReader(new InputStreamReader(inputStreamFile));
         }catch (FileNotFoundException fileNotFoundEx){
             System.err.println("Errore: file non trovato in /GiocaNumeri/" + nomeFile);
             fileNotFoundEx.printStackTrace();
