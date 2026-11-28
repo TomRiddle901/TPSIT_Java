@@ -28,6 +28,7 @@ public class ContoCorrente {
                 deposita(importoRandom);
                 break;
             case "controlla":
+                controlla();
                 break;
             default:
                 System.err.println("Errore: Operazione non valida");
