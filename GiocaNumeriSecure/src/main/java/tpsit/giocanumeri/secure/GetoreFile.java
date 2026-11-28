@@ -46,6 +46,5 @@ public class GetoreFile {
             System.err.println("Errore nella comunicazione I/O della RAM con il disco di sistema");
             ioException.printStackTrace();
         }
-
     }
 }
