@@ -8,6 +8,13 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Aggiunto
 - `GestoreFile`: aggiunta cattura della data corrente e formattata in `gg M yyyy`
 - `GestoreFile`: aggiunto il metodo `salva()` per salvare le informazioni del giocatore
+- `Giocatore`: aggiunto `getNumero()` che restituisce il numero che deve raggiungere il giocatore
+
+### Aggiornato:
+- `Giocatore`: il numero che deve arrivare il giocatore ora è un attributo
+
+### Fixed:
+- `Giocatore`: aggiunti modificatori di accesso per `idGiocatore` e `numero`
 
 ### Documentazione
 - [StackOverlow: How to format a `LocalDate` variable as a `String`](https://stackoverflow.com/questions/28177370/how-can-i-format-a-localdate-variable-as-a-string)
