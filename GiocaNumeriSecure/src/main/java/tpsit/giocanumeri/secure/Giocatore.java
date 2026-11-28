@@ -7,7 +7,7 @@ import java.io.*;
  * @see #Giocatore(String nome, String parola, String keyword, int idGiocatore, Cifrario cifrario, MonitorTastiera tastiera) Giocatore()
  * per visualizzare i parametri richiesti per creare l'oggetto
  * @author TomRiddle901
- * @version 0.2.9
+ * @version 0.3.0
  */
 public class Giocatore extends Thread{
     private String nome;
@@ -64,6 +64,10 @@ public class Giocatore extends Thread{
      */
     public long getIdGiocatore(){
         return idGiocatore;
+    }
+
+    public int getPunteggio(){
+        return punteggio;
     }
 
     public int getNumero(){
