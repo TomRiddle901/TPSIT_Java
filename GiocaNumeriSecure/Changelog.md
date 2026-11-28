@@ -9,9 +9,11 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 - `GestoreFile`: aggiunta cattura della data corrente e formattata in `gg M yyyy`
 - `GestoreFile`: aggiunto il metodo `salva()` per salvare le informazioni del giocatore
 - `Giocatore`: aggiunto `getNumero()` che restituisce il numero che deve raggiungere il giocatore
+- `Giocatore`: aggiunto `getPunteggio` che restituisce il puteggio del giocatore
 
 ### Aggiornato:
 - `Giocatore`: il numero che deve arrivare il giocatore ora è un attributo
+- `Giocatore`: JavaDoc
 
 ### Fixed:
 - `Giocatore`: aggiunti modificatori di accesso per `idGiocatore` e `numero`
