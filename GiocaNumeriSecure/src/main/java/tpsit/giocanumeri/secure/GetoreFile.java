@@ -6,33 +6,28 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * Classe che gestisce il salvataggio/caricamento dei dati del giocatore su un file
- * @see #salva() salva per comprendere il salvataggio
+ * @see #salva(Giocatore giocatore) salva() per comprendere il salvataggio
  * @author TomRiddle901
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class GetoreFile {
     private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
-    private Giocatore giocatore;
-    private BufferedWriter bufferedWriter;
 
     /**
      * Costruttore della classe GestoreFile
-     * @param giocatore Giocatore che si vuole salvare i dati
-     * @param bufferedWriter Puntatore al'oggetto BufferedWriter
      * @see GetoreFile GestoreFile per alte informazioni
      */
-    public GetoreFile(Giocatore giocatore, BufferedWriter bufferedWriter){
-        this.giocatore = giocatore;
-        this.bufferedWriter = bufferedWriter;
-    }
+    public GetoreFile(){}
 
     /**
      * Funzione per il salvataggio su file di un giocatore
+     * @param giocatore Giocatore di cui si deve salvare il file
      */
-    public synchronized void salva(){
+    public synchronized void salva(Giocatore giocatore){
         long idGiocatore = giocatore.getIdGiocatore();
         String dataFormattata = LocalDate.now().format(formatoGGMMYYYY);
         String nomeFile = idGiocatore + " - gioco del " + dataFormattata + ".txt";
+        BufferedWriter bufferedWriter;
 
         File file = new File("GiocaNumeri/" + nomeFile);
 
