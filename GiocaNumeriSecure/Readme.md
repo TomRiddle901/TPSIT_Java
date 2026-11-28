@@ -24,3 +24,15 @@ Il codice sorgente è organizzato nel package `tpsit.giocanumeri.secure` ed è a
 * **[`Cifrario.java`](src/main/java/tpsit/giocanumeri/secure/Cifrario.java)**: Implmenta gli algoritmi `cifra()` e `decifra()` basati sul cifrario di Vigenère e il metodo `convalidaParametri()` per verificare che la parola e chiave contengano solo caratteri alfabetici
 * **[`MonitorTastiera.java`](src/main/java/tpsit/giocanumeri/secure/MonitorTastiera.java)**: Classe *Monitor* che espone il metodo `synchronized inputTastiera(String messaggio)` per garantire la mutua esclusione durante la lettura da standard input (`System.in`) da parte di più thread concorrenti
 * **[`GestoreFile.java`](src/main/java/tpsit/giocanumeri/secure/GetoreFile.java)**: Gestisce la persistenza dei dati del singolo giocatore tramite metodo `synchronized salva(Giocatore)`, generando un file nominato `<idGiocatore> - gioco del <data gg M yyyy>.txt` all'interno della directory `GiocaNumeriSecure/`
+
+---
+
+## Struttura del file di output
+
+Al termine della fase di gioco di ciascun thread, viene creato un file di testo contenente:
+
+```text
+Numero: 20
+Punteggio: 100
+Parola Cifrata: <TESTO_CIFRATO>
+```
