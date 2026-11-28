@@ -22,9 +22,16 @@ public class GetoreFile {
     public synchronized void salva(){
         long idGiocatore = giocatore.threadId();
         String dataFormattata = LocalDate.now().format(formatoGGMMYYYY);
+        String nomeFile = idGiocatore + " - gioco del " + dataFormattata + ".txt";
 
-        File file = new File(idGiocatore + " - gioco del " + dataFormattata);
+        File file = new File("GiocaNumeri/" + nomeFile);
 
-        inputStreamFile = new InputStreamReader(new BufferedInputStream())
+        try{
+            inputStreamFile = new FileInputStream(file);
+        }catch (FileNotFoundException fileNotFoundEx){
+            System.err.println("Errore: file non trovato in /GiocaNumeri/" + nomeFile);
+            fileNotFoundEx.printStackTrace();
+        }
+
     }
 }
