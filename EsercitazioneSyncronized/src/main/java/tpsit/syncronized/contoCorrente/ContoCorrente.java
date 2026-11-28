@@ -5,4 +5,8 @@ import java.util.ArrayList;
 public class ContoCorrente {
     private double saldo;
     ArrayList<Double> movimenti = new ArrayList<>();
+
+    public ContoCorrente(double saldo){
+        this.saldo = saldo;
+    }
 }
