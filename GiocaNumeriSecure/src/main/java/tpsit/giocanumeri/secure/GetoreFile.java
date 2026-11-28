@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
  * Classe che gestisce il salvataggio/caricamento dei dati del giocatore su un file
  * @see #salva(Giocatore giocatore) salva() per comprendere il salvataggio
  * @author TomRiddle901
- * @version 1.0.1
+ * @version 1.0.2
  */
 public class GetoreFile {
     private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
