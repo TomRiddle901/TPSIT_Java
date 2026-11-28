@@ -23,6 +23,7 @@ public class ContoCorrente {
                 preleva(importoRandom);
                 break;
             case "deposita":
+                deposita(importoRandom);
                 break;
             case "controlla":
                 break;
