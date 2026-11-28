@@ -4,10 +4,10 @@ import java.io.*;
 
 /**
  * Thread Giocatore
- * @see #Giocatore(String nome, String parola, String keyword, int idGiocatore, Cifrario cifrario, MonitorTastiera tastiera) Giocatore()
+ * @see #Giocatore(String nome, String parola, String keyword, int idGiocatore, Cifrario cifrario, MonitorTastiera tastiera, GetoreFile salva) Giocatore()
  * per visualizzare i parametri richiesti per creare l'oggetto
  * @author TomRiddle901
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class Giocatore extends Thread{
     private String nome;
@@ -17,6 +17,7 @@ public class Giocatore extends Thread{
     private int numero = 20;
     Cifrario cifrario;
     MonitorTastiera tastiera;
+    GetoreFile salva;
 
     /**
      * Costruttore della classe Giocatore
@@ -24,14 +25,17 @@ public class Giocatore extends Thread{
      * @param parola Parola/frase che verrà cifrata
      * @param keyword Parola chiave per cifrare la parola
      * @param cifrario puntatore all'oggetto cifrario
+     * @param tastiera puntatore all'oggetto tastiera
+     * @param salva puntatore all'oggetto GestoreFile
      * @see Cifrario Cifrario.java per vedere il metodo di crittografia utilizzato
      */
-    public Giocatore(String nome, String parola, String keyword, int idGiocatore, Cifrario cifrario, MonitorTastiera tastiera){
+    public Giocatore(String nome, String parola, String keyword, int idGiocatore, Cifrario cifrario, MonitorTastiera tastiera, GetoreFile salva){
         this.nome = nome;
         this.cifrario = cifrario;
         this.tastiera = tastiera;
         this.parolaCifrata = this.cifrario.cifra(parola, keyword);
         this.idGiocatore = idGiocatore;
+        this.salva = salva;
     }
 
     /**
@@ -105,6 +109,8 @@ public class Giocatore extends Thread{
      * Visualizza nome, punteggio e parolaCifrata del giocatore
      */
     private void comunica(){
+        salva.salva();
+
         String keyword, parolaDecifrata;
 
         System.out.println("Per visualizzare la parola decifrata, digita la keyword altrimenti alscia vuoto");
