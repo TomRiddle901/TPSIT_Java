@@ -41,7 +41,7 @@ public class ContoCorrente {
             System.out.println("Il tuo saldo attuale è: €" + saldo);
         }else {
             saldo -= importo;
-            movimenti.add(dataAttuale + "Prelievo: €" + importo);
+            movimenti.add(dataAttuale + " Prelievo: €" + importo);
             System.out.println("Operazione effettuata con successo.");
             System.out.println("Importo prelevato: €" + importo);
             System.out.println("Saldo attuale: €" + saldo);
@@ -54,6 +54,7 @@ public class ContoCorrente {
             System.out.println("L'importo deve essere >0");
         }else{
             saldo += importo;
+            movimenti.add(dataAttuale + " Deposito: €" + importo);
             System.out.println("Operazione effettuata con successo.");
             System.out.println("Importo depositato: €" + importo);
             System.out.println("Saldo attuale: €" + saldo);
