@@ -1,6 +1,8 @@
 package tpsit.giocanumeri.secure;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -12,7 +14,9 @@ import java.time.format.DateTimeFormatter;
 public class GetoreFile {
     private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
     private String dataFormattata = LocalDate.now().format(formatoGGMMYYYY);
-    Giocatore giocatore;
+    private Giocatore giocatore;
+    private InputStream inputStreamFile = null;
+    private BufferedReader bufferFile;
 
     public GetoreFile(Giocatore giocatore){
         this.giocatore = giocatore;
