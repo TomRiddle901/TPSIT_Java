@@ -4,6 +4,17 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## {0.1.9} 28-11-2026
+### Aggiunto
+- `GestoreFile`: aggiunta cattura della data corrente e formattata in `gg M yyyy`
+
+### Documentazione
+- [StackOverlow: How to format a `LocalDate` variable as a `String`](https://stackoverflow.com/questions/28177370/how-can-i-format-a-localdate-variable-as-a-string)
+
+### Todo
+- Salvataggio su file dei dati dei giocatori quando finiscono di giocare, prima di comunicare il risultato all'utente
+- *Migliorare la stampa per richiedere la keyword*
+
 ## {0.1.8} 16/11/2026
 ### Aggiunto
 - `MonitorTastiera`: parametro `messaggio` per visualizzare un messaggio personalizzato prima dell'input da tastiera
