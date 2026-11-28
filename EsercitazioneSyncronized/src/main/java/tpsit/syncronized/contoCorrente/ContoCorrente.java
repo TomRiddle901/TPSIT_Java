@@ -62,6 +62,11 @@ public class ContoCorrente {
     }
 
     public synchronized void controlla(){
+        System.out.println("Movimenti effettuati:");
+        for (int i = 0; i < movimenti.size(); i++){
+            System.out.println(movimenti.get(i));
+        }
+
         System.out.println("Saldo attuale: €" + saldo);
     }
 }
