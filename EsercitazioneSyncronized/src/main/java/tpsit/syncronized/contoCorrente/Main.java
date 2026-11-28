@@ -8,5 +8,10 @@ public class Main {
 
         Thread corr1 = new Thread(correntista1);
         Thread corr2 = new Thread(correntista2);
+
+        for (int i = 0; i < 10; i++){
+            corr1.start();
+            corr2.start();
+        }
     }
 }
