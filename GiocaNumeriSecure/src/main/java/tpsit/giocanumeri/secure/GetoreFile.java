@@ -14,6 +14,8 @@ public class GetoreFile {
     private String dataFormattata = LocalDate.now().format(formatoGGMMYYYY);
     Giocatore giocatore;
 
-    public GetoreFile(Giocatore giocatore)
+    public GetoreFile(Giocatore giocatore){
+        this.giocatore = giocatore;
+    }
 
 }
