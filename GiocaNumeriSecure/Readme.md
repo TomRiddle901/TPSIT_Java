@@ -56,3 +56,9 @@ Parola Cifrata: <TESTO_CIFRATO>
 2. **Directory di salvataggio**: Assicurarsi che nella root di esecuzione sia presente la cartella `GiocaNumeriSecure/` affinché `FileWriter` possa creare correttamente i file `.txt`
 
 3. **Avvio**: Compilare ed eseguire la classe `tpsit.giocanumeri.secure.GiocaNumeri`, seguire le istruzioni a schermo per inserire i giocatori e, al termine del conteggio di ciascun thread, digitare la keyword per visualizzare la parola decifrata (oppure lasciare vuoto per mostrarla cifrata)
+
+---
+
+## Note
+- Per la documentazione utilizzata consultare il [`Changelog.md`](Changelog.md)
+- Il package `tpsit.giocanumeri.esercitazione` contiene un esercitazione all'utilizzo di `BufferedReader`, `BufferedWriter`, `FileReader`, `FileWriter` e delle eccezioni gestite (come `Exception`) e non gestite (come `NullPointerException`)
