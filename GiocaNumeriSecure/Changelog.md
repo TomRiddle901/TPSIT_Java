@@ -4,6 +4,13 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 
 ---
 
+## {1.0.0} 28-11-2026
+### Aggiunto
+- `Giocatore`: Puntatore alla classe `GestoreFile`
+
+### Aggiornato
+- `Giocatore`: il metodo `comunica()` salva il file prima di comunicare il risultato
+
 ## {0.1.9} 28-11-2026
 ### Aggiunto
 - `GestoreFile`: aggiunta cattura della data corrente e formattata in `gg M yyyy`
