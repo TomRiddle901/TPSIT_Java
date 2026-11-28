@@ -54,7 +54,7 @@ public class GiocaNumeri {
         Cifrario cifrarioObj = new Cifrario();
         MonitorTastiera tastieraObj = new MonitorTastiera();
         int idGiocatore = threads.size();
-        GetoreFile gestoreFile = null;
+        GetoreFile gestoreFile = new GetoreFile();
 
         do{
             nome = tastieraObj.inputTastiera("Nome del giocatore: ");
