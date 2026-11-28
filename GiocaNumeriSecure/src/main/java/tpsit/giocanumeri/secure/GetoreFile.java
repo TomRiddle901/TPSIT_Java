@@ -18,4 +18,7 @@ public class GetoreFile {
         this.giocatore = giocatore;
     }
 
+    public synchronized void salva(){
+
+    }
 }

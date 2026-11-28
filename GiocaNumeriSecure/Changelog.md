@@ -7,6 +7,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ## {0.1.9} 28-11-2026
 ### Aggiunto
 - `GestoreFile`: aggiunta cattura della data corrente e formattata in `gg M yyyy`
+- `GestoreFile`: aggiunto il metodo `salva()` per salvare le informazioni del giocatore
 
 ### Documentazione
 - [StackOverlow: How to format a `LocalDate` variable as a `String`](https://stackoverflow.com/questions/28177370/how-can-i-format-a-localdate-variable-as-a-string)
