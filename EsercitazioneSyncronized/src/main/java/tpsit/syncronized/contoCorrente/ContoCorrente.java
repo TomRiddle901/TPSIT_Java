@@ -33,13 +33,23 @@ public class ContoCorrente {
     }
 
     public synchronized void preleva(double importo){
-        if (saldo <= 0){
-            System.out.println("Impossibile prelevare.\nIl tuo saldo attuale è: €" + saldo);
+        if (saldo <= 0 || importo < 0){
+            System.out.println("Impossibile prelevare.");
+            System.out.println("Il tuo saldo attuale è: €" + saldo);
         }else {
             saldo -= importo;
             System.out.println("Operazione effettuata con successo.");
             System.out.println("Importo prelevato: €" + importo);
             System.out.println("Saldo attuale: €" + saldo);
+        }
+    }
+
+    public synchronized void deposita(double importo) {
+        if (importo < 0){
+            System.err.println("Importo inserito non corretto.");
+            System.out.println("L'importo deve essere >0");
+        }else{
+            saldo += importo;
         }
     }
 }
