@@ -6,14 +6,12 @@ import java.time.LocalDate;
 
 public class ContoCorrente {
     private double saldo;
-    private int numeroConto;
     private String[] operazioni = {"preleva", "deposita", "controlla"};
     ArrayList<String> movimenti = new ArrayList<>();
     LocalDate dataAttuale = LocalDate.now();
 
-    public ContoCorrente(double saldo, int numeroConto){
+    public ContoCorrente(double saldo){
         this.saldo = saldo;
-        this.numeroConto = numeroConto;
     }
 
     public synchronized void operazioneRandom(){
