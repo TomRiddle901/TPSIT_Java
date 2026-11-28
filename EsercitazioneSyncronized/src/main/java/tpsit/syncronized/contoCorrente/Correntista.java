@@ -13,6 +13,8 @@ public class Correntista implements Runnable{
 
     @Override
     public void run(){
-
+        System.out.println("Correntista " + nome + " " + cognome);
+        System.out.println("Esecuzione di un operazione random...");
+        contoCorrente.operazioneRandom();
     }
 }
