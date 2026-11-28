@@ -17,6 +17,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Rimosso
 - `GestoreFile`: il costruttore ora è senza parametri perché erano ridondanti
 - `GestoreFile`: tutti gli attributi tranne il dateTimeFormatter
+- `Giocatore`: rimosso sleep del thread per far andare in parallelo più giocatori
 
 ## {0.1.9} 28-11-2026
 ### Aggiunto
