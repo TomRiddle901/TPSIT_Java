@@ -54,6 +54,7 @@ public class GiocaNumeri {
         Cifrario cifrarioObj = new Cifrario();
         MonitorTastiera tastieraObj = new MonitorTastiera();
         int idGiocatore = threads.size();
+        GetoreFile gestoreFile = null;
 
         do{
             nome = tastieraObj.inputTastiera("Nome del giocatore: ");
@@ -70,8 +71,7 @@ public class GiocaNumeri {
             scelta = tastieraObj.inputTastiera("Vuoi creare un altro giocatore? [y/n]: ").toLowerCase();
 
             cifrarioObj.convalidaParametri(parola, keyword);
-
-            threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore, cifrarioObj, tastieraObj)));
+            threads.add(new Thread(new Giocatore(nome, parola, keyword, idGiocatore, cifrarioObj, tastieraObj, gestoreFile)));
             idGiocatore++;
         }while (!scelta.equals("n"));
 
