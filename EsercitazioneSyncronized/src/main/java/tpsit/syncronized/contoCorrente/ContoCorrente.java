@@ -14,7 +14,9 @@ public class ContoCorrente {
 
     public synchronized void operazioneRandom(){
         Random numeroRandom = new Random();
+        Random importoOperazioneRandom = new Random();
         int indiceCasuale = numeroRandom.nextInt(operazioni.length);
+        double importoRandom = importoOperazioneRandom.nextDouble(0, 500);
 
         switch (operazioni[indiceCasuale]){
             case "preleva":
