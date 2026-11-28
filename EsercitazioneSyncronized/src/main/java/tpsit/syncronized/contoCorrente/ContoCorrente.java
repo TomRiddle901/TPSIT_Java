@@ -11,8 +11,9 @@ public class ContoCorrente {
     ArrayList<String> movimenti = new ArrayList<>();
     LocalDate dataAttuale = LocalDate.now();
 
-    public ContoCorrente(double saldo){
+    public ContoCorrente(double saldo, int numeroConto){
         this.saldo = saldo;
+        this.numeroConto = numeroConto;
     }
 
     public synchronized void operazioneRandom(){
