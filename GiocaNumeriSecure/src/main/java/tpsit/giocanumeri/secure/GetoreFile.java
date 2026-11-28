@@ -28,7 +28,7 @@ public class GetoreFile {
         File file = new File("GiocaNumeri/" + nomeFile);
 
         try{
-            bufferedWriter = new FileWriter(file);
+            bufferedWriter = new BufferedWriter(new FileWriter(file));
         } catch (IOException ioException) {
             System.err.println("Errore nella comunicazione I/O della RAM con il disco di sistema");
             ioException.printStackTrace();
