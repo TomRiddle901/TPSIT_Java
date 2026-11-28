@@ -12,10 +12,12 @@ import java.time.format.DateTimeFormatter;
 public class GetoreFile {
     private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
     private Giocatore giocatore;
+    private BufferedWriter bufferedWriter;
 
 
-    public GetoreFile(Giocatore giocatore){
+    public GetoreFile(Giocatore giocatore, BufferedWriter bufferedWriter){
         this.giocatore = giocatore;
+        this.bufferedWriter = bufferedWriter;
     }
 
     public synchronized void salva(){
@@ -24,8 +26,5 @@ public class GetoreFile {
         String nomeFile = idGiocatore + " - gioco del " + dataFormattata + ".txt";
 
         File file = new File("GiocaNumeri/" + nomeFile);
-
-
-
     }
 }
