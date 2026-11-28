@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
  * @version 0.0.0
  */
 public class GetoreFile {
-    DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
-    LocalDate dataCorrente = LocalDate.now().format(formatoGGMMYYYY);
+    private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
+    private String dataFormattata = LocalDate.now().format(formatoGGMMYYYY);
+
 }
