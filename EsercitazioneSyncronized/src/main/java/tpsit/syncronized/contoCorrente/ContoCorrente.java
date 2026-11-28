@@ -18,6 +18,7 @@ public class ContoCorrente {
 
         switch (operazioni[indiceCasuale]){
             case "preleva":
+                preleva(20);
                 break;
             case "deposita":
                 break;
