@@ -2,11 +2,13 @@ package tpsit.syncronized.contoCorrente;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.time.LocalDate;
 
 public class ContoCorrente {
     private double saldo;
     private String[] operazioni = {"preleva", "deposita", "controlla"};
     ArrayList<String> movimenti = new ArrayList<>();
+    LocalDate dataAttuale = LocalDate.now();
 
     public ContoCorrente(double saldo){
         this.saldo = saldo;
@@ -39,7 +41,7 @@ public class ContoCorrente {
             System.out.println("Il tuo saldo attuale è: €" + saldo);
         }else {
             saldo -= importo;
-            movimenti.add("Prelievo: €" + importo);
+            movimenti.add( "Prelievo: €" + importo);
             System.out.println("Operazione effettuata con successo.");
             System.out.println("Importo prelevato: €" + importo);
             System.out.println("Saldo attuale: €" + saldo);
