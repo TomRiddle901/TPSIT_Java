@@ -36,3 +36,13 @@ Numero: 20
 Punteggio: 100
 Parola Cifrata: <TESTO_CIFRATO>
 ```
+
+---
+
+## Gestione delle eccezioni
+
+* **Eccezioni controllate**:
+  * `IOException`: catturata in `MonitorTastiera.inputTastiera()` durante la lettura da `BufferedReader` e in `GetoreFile.salva()` durante apertura, scrittura e chiusura del `BufferedWriter`
+  * `Exception`: sollevata da `Cifrario.convalidaParametri()` (con messaggi concatenati se sia la parola che la keyword non sono valide) e da `GiocaNumeri.lanciaGioco()` in caso di errore in fase di acquisizione input
+* **Eccezioni non controllate**:
+  * `NullPointerException`: catturata esplicitamente nel blocco `finally` di `GetoreFile.salva()` qualora `bufferedWriter.close()` venga invocato su un riferimento `null` a seguito di un errore precedente in apertura del file
