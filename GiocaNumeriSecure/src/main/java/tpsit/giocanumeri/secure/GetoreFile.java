@@ -12,5 +12,9 @@ import java.time.format.DateTimeFormatter;
 public class GetoreFile {
     private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
     private String dataFormattata = LocalDate.now().format(formatoGGMMYYYY);
+    Giocatore giocatore;
+    File file;
+
+    public GetoreFile(Giocatore giocatore, File file)
 
 }
