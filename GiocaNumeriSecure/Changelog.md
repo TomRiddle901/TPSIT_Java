@@ -8,6 +8,7 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ### Aggiunto
 - `Giocatore`: Puntatore alla classe `GestoreFile`
 - `GiocaNumeri`: crea l'oggetto `GestoreFile` e passa il puntatore alla classe `Giocatore`
+- `GestoreFile`: chiusura del buffer di scrittura
 
 ### Aggiornato
 - `Giocatore`: il metodo `comunica()` salva il file prima di comunicare il risultato

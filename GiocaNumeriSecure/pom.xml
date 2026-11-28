@@ -6,7 +6,7 @@
 
     <groupId>tpsit.giocanumeri.secure</groupId>
     <artifactId>GiocaNumeriSecure</artifactId>
-    <version>0.1.8</version>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>27</maven.compiler.source>
