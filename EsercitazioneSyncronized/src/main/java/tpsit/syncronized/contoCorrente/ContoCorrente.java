@@ -20,7 +20,7 @@ public class ContoCorrente {
 
         switch (operazioni[indiceCasuale]){
             case "preleva":
-                preleva(20);
+                preleva(importoRandom);
                 break;
             case "deposita":
                 break;
