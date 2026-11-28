@@ -109,7 +109,7 @@ public class Giocatore extends Thread{
      * Visualizza nome, punteggio e parolaCifrata del giocatore
      */
     private void comunica(){
-        salva.salva();
+        salva.salva(this); // Passa se stessa (la classe passa il proprio puntatore)
 
         String keyword, parolaDecifrata;
 
