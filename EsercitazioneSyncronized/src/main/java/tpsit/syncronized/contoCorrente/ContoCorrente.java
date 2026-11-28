@@ -34,7 +34,9 @@ public class ContoCorrente {
             System.out.println("Impossibile prelevare.\nIl tuo saldo attuale è: €" + saldo);
         }else {
             saldo -= importo;
-            System.
+            System.out.println("Operazione effettuata con successo.");
+            System.out.println("Importo prelevato: €" + importo);
+            System.out.println("Saldo attuale: €" + saldo);
         }
     }
 }
