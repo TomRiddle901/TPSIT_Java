@@ -2,6 +2,7 @@ package tpsit.giocanumeri.secure;
 
 import java.io.File;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Classe che gestisce il salvataggio/caricamento dei dati del giocatore su un file
@@ -9,5 +10,6 @@ import java.time.LocalDate;
  * @version 0.0.0
  */
 public class GetoreFile {
-    LocalDate dataCorrente = LocalDate.now();
+    DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
+    LocalDate dataCorrente = LocalDate.now().format(formatoGGMMYYYY);
 }
