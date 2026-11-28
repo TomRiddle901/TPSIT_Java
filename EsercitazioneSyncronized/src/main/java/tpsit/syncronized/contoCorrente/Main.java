@@ -6,6 +6,7 @@ public class Main {
         Correntista correntista1 = new Correntista("Mario", "Rossi", contoCorrente);
         Correntista correntista2 = new Correntista("Rossi", "Mario", contoCorrente);
 
-
+        Thread corr1 = new Thread(correntista1);
+        Thread corr2 = new Thread(correntista2);
     }
 }
