@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * Classe che gestisce il salvataggio/caricamento dei dati del giocatore su un file
  * @author TomRiddle901
- * @version 0.0.7
+ * @version 0.0.9
  */
 public class GetoreFile {
     private DateTimeFormatter formatoGGMMYYYY = DateTimeFormatter.ofPattern("dd M yyyy");
@@ -30,9 +30,9 @@ public class GetoreFile {
         try{
             bufferedWriter = new BufferedWriter(new FileWriter(file));
 
-            bufferedWriter.write(
-                    giocatore.getParolaCifrata()
-            );
+            bufferedWriter.write("Numero: " + giocatore.getNumero() + "\n" +
+                    "Punteggio: " + giocatore.getPunteggio() + "\n" +
+                    "Parola Cifrata: " + giocatore.getParolaCifrata());
         } catch (IOException ioException) {
             System.err.println("Errore nella comunicazione I/O della RAM con il disco di sistema");
             ioException.printStackTrace();
