@@ -7,9 +7,15 @@ Tutte le modifiche rilevanti a questo progetto saranno documentate in questo fil
 ## {1.0.0} 28-11-2026
 ### Aggiunto
 - `Giocatore`: Puntatore alla classe `GestoreFile`
+- `GiocaNumeri`: crea l'oggetto `GestoreFile` e passa il puntatore alla classe `Giocatore`
 
 ### Aggiornato
 - `Giocatore`: il metodo `comunica()` salva il file prima di comunicare il risultato
+- `GestoreFile`, `Giocatore`, `GiocaNumeri`: JavaDoc
+
+### Rimosso
+- `GestoreFile`: il costruttore ora è senza parametri perché erano ridondanti
+- `GestoreFile`: tutti gli attributi tranne il dateTimeFormatter
 
 ## {0.1.9} 28-11-2026
 ### Aggiunto
