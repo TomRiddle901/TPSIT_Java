@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class ContoCorrente {
     private double saldo;
-    private String[] operazioni = {"Preleva", "Deposita", "Controlla"};
+    private String[] operazioni = {"preleva", "deposita", "controlla"};
     ArrayList<Double> movimenti = new ArrayList<>();
 
     public ContoCorrente(double saldo){
@@ -16,6 +16,16 @@ public class ContoCorrente {
         Random numeroRandom = new Random();
         int indiceCasuale = numeroRandom.nextInt(operazioni.length);
 
-
+        switch (operazioni[indiceCasuale]){
+            case "preleva":
+                break;
+            case "deposita":
+                break;
+            case "controlla":
+                break;
+            default:
+                System.err.println("Errore: Operazione non valida");
+                break;
+        }
     }
 }
