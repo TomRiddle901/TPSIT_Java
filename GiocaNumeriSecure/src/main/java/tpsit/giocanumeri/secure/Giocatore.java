@@ -13,7 +13,8 @@ public class Giocatore extends Thread{
     private String nome;
     private String parolaCifrata;
     private int punteggio;
-    int idGiocatore;
+    private int idGiocatore;
+    private int numero = 20;
     Cifrario cifrario;
     MonitorTastiera tastiera;
 
@@ -65,12 +66,14 @@ public class Giocatore extends Thread{
         return idGiocatore;
     }
 
+    public int getNumero(){
+        return numero;
+    }
+
     /**
      * Logica del gioco
      */
     private void gioca(){
-        int numero = 20;
-
         getDettagli();
 
         for (int i = 0; i < numero; i++){
