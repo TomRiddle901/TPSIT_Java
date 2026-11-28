@@ -1,0 +1,3 @@
+Numero: 20
+Punteggio: 100
+Parola Cifrata: BMRU

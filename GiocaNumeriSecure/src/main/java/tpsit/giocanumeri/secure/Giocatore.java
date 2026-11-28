@@ -94,12 +94,12 @@ public class Giocatore extends Thread{
 
         for (int i = 0; i < numero; i++){
             System.out.println(nome + ": " + i);
-
+            /*
             try {
                 Thread.sleep(500);
             }catch (InterruptedException interruptedEx){
                 System.err.println("Errore nella transizione del Thread da running a sleeping");
-            }
+            }*/
         }
 
         setPunteggio(100);
