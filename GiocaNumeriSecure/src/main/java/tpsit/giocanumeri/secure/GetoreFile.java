@@ -26,5 +26,13 @@ public class GetoreFile {
         String nomeFile = idGiocatore + " - gioco del " + dataFormattata + ".txt";
 
         File file = new File("GiocaNumeri/" + nomeFile);
+
+        try{
+            bufferedWriter = new FileWriter(file);
+        } catch (IOException ioException) {
+            System.err.println("Errore nella comunicazione I/O della RAM con il disco di sistema");
+            ioException.printStackTrace();
+        }
+
     }
 }
